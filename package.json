@@ -1,0 +1,30 @@
+{
+  "name": "web-front-end-course-project",
+  "version": "1.0.0",
+  "description": "Course project for Telerik Academy's \"Web front-end development\"(Slice and Dice) course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CosmicEon/web-front-end-course-project.git"
+  },
+  "keywords": [],
+  "author": "Krasen Ilkov (CosmicEon)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CosmicEon/web-front-end-course-project/issues"
+  },
+  "homepage": "https://github.com/CosmicEon/web-front-end-course-project#readme",
+  "dependencies": {
+    "@types/express": "^4.0.37",
+    "@types/mongodb": "^2.2.11",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31"
+  },
+  "devDependencies": {
+    "@types/morgan": "^1.7.33",
+    "morgan": "^1.8.2"
+  }
+}
