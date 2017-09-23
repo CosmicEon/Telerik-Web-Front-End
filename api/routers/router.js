@@ -1,6 +1,6 @@
 const attachTo = (app, data) => {
     // Insert other routes here
-    require('./book.router').attach(app, data);
+    require('./books/books.router').attach(app, data);
 };
 
 module.exports = { attachTo };

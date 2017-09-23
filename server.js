@@ -18,7 +18,7 @@ startServer()
     .then((data) => {
         console.log(data);
         console.log('Initializing app...');
-        require('./api/app').init(data);
+        require('./api/config/init.app').init(data);
     })
     .then((app) => {
         console.log(app);

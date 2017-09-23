@@ -1,5 +1,5 @@
-const BooksData = require('./books.data');
-const Book = require('../models/book.model');
+const BooksData = require('./books/books.data');
+const Book = require('./books/book.model');
 
 const init = (db) => {
     console.log(db);
