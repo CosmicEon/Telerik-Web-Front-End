@@ -1,6 +1,0 @@
-@media (min-width: 1601px) {
-  .hidden-lg {
-    display: none !important; }
-    .hidden-lg .hiden-nested {
-      background-color: #ccc;
-      color: black; } }
