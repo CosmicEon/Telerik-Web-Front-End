@@ -1,29 +1,28 @@
 const config = require('./api/config/constants');
-
 const startServer = () => {
     return Promise.resolve();
 };
 
-console.log('Starting app...');
+console.log('-------------------------------');
+console.log('Starting Server...');
 startServer()
     .then(() => {
-        console.log('Initializing db...');
-        require('./api/db/db').init(config.constants.mongoDbConnection);
+        console.log('Initializing DB...');
+        return require('./api/db/db').init(config.constants.mongoDbConnection);
     })
     .then((db) => {
-        console.log(db);
-        console.log('Initializing data...');
-        require('./api/data/data').init(db);
+        console.log('Initializing Data Layer...');
+        return require('./api/data/data').init(db);
     })
     .then((data) => {
-        console.log(data);
-        console.log('Initializing app...');
-        require('./api/config/init.app').init(data);
+        console.log('Initializing Server...');
+        return require('./api/config/init.app').init(data);
     })
     .then((app) => {
-        console.log(app);
         app.listen(config.constants.serverPort, () => {
-            console.log(`Server runs on port :${config.constants.serverPort}`);
+            console.log('-------------------------------');
+            console.log(`Server is running on port :${config.constants.serverPort}`);
+            console.log('-------------------------------');
         });
     })
     .catch((error) => {

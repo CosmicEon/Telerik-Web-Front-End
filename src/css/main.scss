@@ -1,0 +1,15 @@
+@media (max-width: 360px) {}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 1600px) {}
+
+@media (min-width: 1601px) {
+    .hidden-lg {
+        display: none !important;
+        .hiden-nested {
+            background-color: #ccc;
+            color: black;
+        }
+    }
+}
