@@ -8,19 +8,23 @@ const nodemon = require('gulp-nodemon');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 
+const open = require('open');
+
+const config = require('./api/config/constants');
 
 const folder = {
-    src: './src/',
+    src: './public/',
     dest: './dist/',
 };
 
-gulp.task('app:prod', () => {
-    return require('./server');
-});
-
 // main entry point for development
 // build is needed if there is no initial dist folder
-gulp.task('dev', ['build', 'dev:server', 'dev:watch']);
+// gulp.task('dev', ['build', 'dev:page', 'dev:server', 'dev:watch']);
+gulp.task('dev', ['dev:page', 'dev:server', 'dev:watch']);
+
+gulp.task('dev:page', () => {
+    return open(`http://localhost:${config.constants.serverPort}`);
+});
 
 // start server for dev
 gulp.task('dev:server', () => {

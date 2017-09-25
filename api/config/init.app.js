@@ -17,8 +17,8 @@ const init = (data) => {
     }));
 
     // Load static content
-    // app.use(express.static(path.join(__dirname, '../dist/')));
-    // app.use('/dist', express.static('dist'));
+    app.use(express.static(path.join(__dirname, '../../public/')));
+    app.use('/dev', express.static('public'));
 
     require('../routers/router').attachTo(app, data);
 

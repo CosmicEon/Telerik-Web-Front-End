@@ -37,6 +37,7 @@
         "@types/gulp-sass": "0.0.30",
         "@types/gulp-uglify": "^3.0.1",
         "@types/morgan": "^1.7.33",
+        "@types/open": "0.0.29",
         "babel-preset-env": "^1.6.0",
         "flow-bin": "^0.55.0",
         "gulp": "^3.9.1",
@@ -48,6 +49,7 @@
         "gulp-nodemon": "^2.2.1",
         "gulp-sass": "^3.1.0",
         "gulp-uglify": "^3.0.0",
-        "morgan": "^1.8.2"
+        "morgan": "^1.8.2",
+        "open": "0.0.5"
     }
 }

@@ -1,10 +1,10 @@
-const BooksData = require('./books/books.data');
-const Book = require('./books/book.model');
+const MovieData = require('./movie/movies.data');
+const Movie = require('./movie/movie.model');
 
 const init = (db) => {
     return Promise.resolve({
         // Insert data models here
-        books: new BooksData(db, Book),
+        movies: new MovieData(db, Movie),
     });
 };
 
