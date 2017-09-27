@@ -5,22 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Movie Forum</title>
+    <!-- css -->
+    <link rel="stylesheet" href="/public/styles/main.css">
+    <link rel="stylesheet" href="/public/styles/media.queries.css">
+
+    <!-- <script src="./node_modules/systemjs/dist/system.js"></script>
+    <script src="js/system-config.js"></script>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/styling.css"> -->
 </head>
 
 <body>
-    <div>test</div>
-    <!-- App start -->
-    <!-- System.import("main"); -->
-    <!-- <script type="module">
-        import * as startApp from './js/main.js'; startApp();
-    </script> -->
-    <script type="module">
-        import {addTextToBody} from './js/main.js'; addTextToBody('Modules are pretty cool.');
+    <div id="main-test">Div test</div>
+
+    <!-- inject:js -->
+    <script src="/libs/systemjs/dist/system.js"></script>
+    <script src="/public/scripts/system.config.js"></script>
+    <script>
+        System.import('./scripts/main.js');
+
     </script>
-    <script type="javascript" type="text/javascript" src="./js/main.js"></script>
-    <!-- Libs -->
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
 </body>
 
 </html>

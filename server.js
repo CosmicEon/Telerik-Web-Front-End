@@ -17,7 +17,7 @@ startServer()
     })
     .then((data) => {
         console.log('Initializing Server...');
-        return require('./api/config/init.app').init(data);
+        return require('./api/config/app').init(data);
     })
     .then((app) => {
         app.listen(config.constants.serverPort, () => {
