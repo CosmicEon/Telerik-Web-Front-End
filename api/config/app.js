@@ -10,6 +10,10 @@ const cors = require('cors');
 const init = (data) => {
     const app = express();
 
+    // Load static content
+    app.use('/', express.static('public'));
+    app.use('/libs', express.static('node_modules'));
+
     // Middlewares
     app.use(cors());
     app.use(morgan('combined', {
@@ -20,10 +24,6 @@ const init = (data) => {
     app.use(cookieParser());
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
-
-    // Load static content
-    app.use('/public', express.static('public'));
-    app.use('/libs', express.static('node_modules'));
 
     require('../routers/router').attachTo(app, data);
 

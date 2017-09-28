@@ -1,23 +1,27 @@
 import Handlebars from 'handlebars';
 import { get as getTemplate } from 'requester';
 
-const cachedTemplates = {};
+const tamplateLoader = () => {
+    const cachedTemplates = {};
+    console.log('template.compiler.js');
 
-function loadTemplate(templateName) {
-    return new Promise((resolve, reject) => {
-        if (cachedTemplates[templateName]) {
-            return Promise.resolve(cachedTemplates[templateName]);
-        }
+    function load(templateName) {
+        return new Promise((resolve, reject) => {
+            if (cachedTemplates[templateName]) {
+                return Promise.resolve(cachedTemplates[templateName]);
+            }
+            const url = `views/${templateName}.hbs`;
 
-        const url = `templates/${templateName}.hbs`;
+            return getTemplate(url)
+                .then((template) => {
+                    const compiledTemplate = Handlebars.compile(template);
+                    cachedTemplates[compiledTemplate] = compiledTemplate;
+                    console.log(compiledTemplate());
+                    return Promise.resolve(compiledTemplate());
+                });
+        });
+    }
+    return { load };
+};
 
-        return getTemplate(url)
-            .then((template) => {
-                const compiledTemplate = Handlebars.compile(template);
-                cachedTemplates[compiledTemplate] = compiledTemplate;
-                return Promise.resolve(compiledTemplate);
-            });
-    });
-}
-
-export { loadTemplate };
+export { tamplateLoader };

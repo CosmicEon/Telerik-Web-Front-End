@@ -1,6 +1,16 @@
-import 'bootstrap';
-import * as router from 'router';
+import 'jquery';
+import Navigo from 'navigo';
+import * as homeController from 'homeController';
+// import * as moviesController from 'moviesController';
 
-// Middlewares insert here
+const appRoot = null;
+const useHash = true;
+const hash = '#';
 
-router.initRouter();
+const router = new Navigo(appRoot, useHash, hash);
+
+router
+    .navigate('#/home')
+    .on('/home', homeController.getHome)
+    // .on('/movie', moviesController.getMovies)
+    .resolve();

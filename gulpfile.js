@@ -25,7 +25,7 @@ gulp.task('dev', ['dev:page', 'dev:server', 'dev:watch']);
 
 gulp.task('dev:page', () => {
     // depends on server, that statically hosts front-end(public folder)
-    return open(`http://localhost:${config.constants.serverPort}/public/`);
+    return open(`http://localhost:${config.constants.serverPort}`);
 });
 
 // start server for dev
@@ -53,7 +53,7 @@ gulp.task('dev:build', ['dev:html', 'dev:sass', 'dev:js']);
 
 gulp.task('dev:html', () => {
     return gulp.src(folder.src + '*.html')
-        .pipe(newer(folder.dest)) // checks if src files are newer than in dest folder
+        .pipe(newer(folder.src)) // checks if src files are newer than in dest folder
         .pipe(gulp.dest(folder.src));
 });
 

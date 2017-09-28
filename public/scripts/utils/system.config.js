@@ -1,3 +1,5 @@
+/* globals System */
+
 System.config({
     transpiler: 'plugin-babel',
     map: {
@@ -13,11 +15,13 @@ System.config({
 
         // app
         'main': '/scripts/main.js',
+        // 'router': 'scripts/router/router.js',
         'requester': '/scripts/utils/requester.js',
         'data': '',
         'templates': '/scripts/utils/template.compiler.js',
 
         // controllers
-        'homeController': '/scripts/router/home.controller.js',
+        'homeController': '/scripts/controllers/home.controller.js',
+        'moviesController': '/scripts/controllers/movies.controller.js',
     },
 });
