@@ -1,14 +1,16 @@
+/* globals $ */
+
 import { tamplateLoader } from 'templates';
 
-const $mainContainer = $('main-test');
+const $mainContainer = $('#main-test');
+const templateName = 'home';
 
 function getHome() {
-    return Promise.resolve(tamplateLoader.load('home'))
+    return tamplateLoader(templateName)
         .then((template) => {
-            console.log('home.controller');
-            // console.log(template);
-
-            $mainContainer.html(template());
+            // this is used if data is passed on template
+            // $mainContainer.html(template(data));
+            $mainContainer.html(template);
         })
         .catch((err) => {
             return console.log(err);

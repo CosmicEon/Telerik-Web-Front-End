@@ -1,3 +1,5 @@
+/* globals $ */
+
 function ajax(url, method, body, headers) {
     return new Promise((resolve, reject) => {
         $.ajax({

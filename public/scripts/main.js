@@ -1,7 +1,8 @@
 import 'jquery';
 import Navigo from 'navigo';
+
 import * as homeController from 'homeController';
-// import * as moviesController from 'moviesController';
+import * as moviesController from 'moviesController';
 
 const appRoot = null;
 const useHash = true;
@@ -12,5 +13,5 @@ const router = new Navigo(appRoot, useHash, hash);
 router
     .navigate('#/home')
     .on('/home', homeController.getHome)
-    // .on('/movie', moviesController.getMovies)
+    .on('/movies', moviesController.getMovies)
     .resolve();
