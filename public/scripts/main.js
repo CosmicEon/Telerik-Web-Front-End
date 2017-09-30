@@ -13,5 +13,5 @@ const router = new Navigo(appRoot, useHash, hash);
 router
     .navigate('#/home')
     .on('/home', homeController.getHome)
-    .on('/movies', moviesController.getMovies)
+    .on('/movies/:category', moviesController.getMovies)
     .resolve();

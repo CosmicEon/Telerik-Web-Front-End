@@ -1,4 +1,41 @@
-.test {
-  background-color: limegreen; }
-  .test .nested {
-    color: black; }
+@font-face {
+  font-family: 'LeagueGothic';
+  src: url("../fonts/LeagueGothic-Regular.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'DroidSans';
+  src: url("../fonts/DroidSans.ttf") format("truetype"); }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  font-family: 'LeagueGothic';
+  background: linear-gradient(to right, #1d1d1d 0%, #323232 25%, #323232 75%, #1d1d1d 100%); }
+
+.header-logo {
+  margin-top: 122px;
+  margin-left: 66px; }
+
+.header-nav .header-nav-menu {
+  margin-left: 33px; }
+  .header-nav .header-nav-menu li {
+    display: inline-block;
+    margin: 0px 8px; }
+    .header-nav .header-nav-menu li a {
+      text-decoration: none;
+      color: white;
+      font-size: 25px; }
+    .header-nav .header-nav-menu li .btn-home {
+      color: #dcc08e; }
+
+.main-nav .main-nav-menu {
+  margin-left: 720px;
+  margin-top: 760px; }
+  .main-nav .main-nav-menu li {
+    display: inline-block;
+    margin: 0px 8px; }
+    .main-nav .main-nav-menu li a {
+      text-decoration: none;
+      color: white;
+      font-size: 32px; }

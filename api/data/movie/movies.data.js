@@ -36,7 +36,12 @@ class MovieData {
 
     getMovieByCategoryAndSubcategory(firstCategory, secondCategory, maxSearch) {
         return new Promise((resolve, reject) => {
-            const result = this.collection.find({ genres: [firstCategory, secondCategory] })
+            const result = this.collection.find({
+                $and: [
+                    { genres: firstCategory },
+                    { genres: secondCategory },
+                ],
+            })
                 .collation({ locale: 'en', strength: 2 }) // strength:2 for case insensitive search
                 .limit(maxSearch)
                 .toArray();

@@ -25,6 +25,8 @@ const moviesController = (data) => {
     };
 
     const getMovieByCategoryAndSubcategory = (req, res) => {
+        console.log(req.params);
+
         const firstCategory = req.params.category;
         const secondCategory = req.params.subcategory;
         data.movies.getMovieByCategoryAndSubcategory(firstCategory, secondCategory, maxSearchMovies)
@@ -38,7 +40,8 @@ const moviesController = (data) => {
     };
 
     const getMovieByCategory = (req, res) => {
-        const category = req.params.id;
+        console.log(req.params);
+        const category = req.params.category;
 
         data.movies.getMovieByCategory(category, maxSearchMovies)
             .then((movie) => {
