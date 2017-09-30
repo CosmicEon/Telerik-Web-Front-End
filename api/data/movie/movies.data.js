@@ -1,24 +1,47 @@
 class MovieData {
     constructor(db, movieModel) {
-        // console.log(db);
         this.db = db;
         this.movieModel = movieModel;
         this.collection = this.db.collection('movies');
     }
-    getMovies(max) {
+
+    getAllMovies(max) {
         return this.collection.find()
             .limit(max)
             .toArray();
     }
-    getMovieById(id) {
+
+    getMovieById(searchedId) {
         return new Promise((resolve, reject) => {
-            this.collection.findOne({ _id: id }, (error, movie) => {
+            this.collection.findOne({ id: searchedId }, (error, movie) => {
                 if (error) {
                     return reject(error);
                 }
 
                 return resolve(movie);
             });
+        });
+    }
+
+    getMovieByCategory(category, maxSearch) {
+        return new Promise((resolve, reject) => {
+            const result = this.collection.find({ genres: category })
+                .collation({ locale: 'en', strength: 2 }) // strength:2 for case insensitive search
+                .limit(maxSearch)
+                .toArray();
+
+            return resolve(result);
+        });
+    }
+
+    getMovieByCategoryAndSubcategory(firstCategory, secondCategory, maxSearch) {
+        return new Promise((resolve, reject) => {
+            const result = this.collection.find({ genres: [firstCategory, secondCategory] })
+                .collation({ locale: 'en', strength: 2 }) // strength:2 for case insensitive search
+                .limit(maxSearch)
+                .toArray();
+
+            return resolve(result);
         });
     }
 }

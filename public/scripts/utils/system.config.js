@@ -15,7 +15,6 @@ System.config({
 
         // app
         'main': '/scripts/main.js',
-        // 'router': 'scripts/router/router.js',
         'requester': '/scripts/utils/requester.js',
         'data': '',
         'templates': '/scripts/utils/template.compiler.js',

@@ -1,5 +1,5 @@
 const constants = {
-    mongoDbConnection: 'mongodb://localhost/books-course-project',
+    mongoDbConnection: 'mongodb://localhost/web-course-project',
     serverPort: 8080,
 };
 

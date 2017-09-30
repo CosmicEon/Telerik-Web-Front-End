@@ -1,17 +1,19 @@
+const maxReturn = 55;
+const maxSearchMovies = 11;
 const moviesController = (data) => {
-    const maxMovies = 11;
-    const getMovies = (req, res) => {
-        data.movies.getMovies(maxMovies)
+    const getAllMovies = (req, res) => {
+        data.movies.getAllMovies(maxReturn)
             .then((result) => {
                 res.status(200)
                     .json(result);
             })
             .catch((err) => {
-                console.log(err);
+                return res.json(err);
             });
     };
-    const getMovie = (req, res) => {
-        const id = req.params.id; // in url
+
+    const getMovieById = (req, res) => {
+        const id = parseInt(req.params.id, 10); // returns string
         data.movies.getMovieById(id)
             .then((movie) => {
                 res.status(200)
@@ -22,9 +24,37 @@ const moviesController = (data) => {
             });
     };
 
+    const getMovieByCategoryAndSubcategory = (req, res) => {
+        const firstCategory = req.params.category;
+        const secondCategory = req.params.subcategory;
+        data.movies.getMovieByCategoryAndSubcategory(firstCategory, secondCategory, maxSearchMovies)
+            .then((movie) => {
+                res.status(200)
+                    .json(movie);
+            })
+            .catch((err) => {
+                return res.json(err);
+            });
+    };
+
+    const getMovieByCategory = (req, res) => {
+        const category = req.params.id;
+
+        data.movies.getMovieByCategory(category, maxSearchMovies)
+            .then((movie) => {
+                res.status(200)
+                    .json(movie);
+            })
+            .catch((err) => {
+                return res.json(err);
+            });
+    };
+
     return {
-        getMovies,
-        getMovie,
+        getAllMovies,
+        getMovieById,
+        getMovieByCategoryAndSubcategory,
+        getMovieByCategory,
     };
 };
 
