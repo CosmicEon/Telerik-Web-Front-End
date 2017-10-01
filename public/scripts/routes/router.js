@@ -1,4 +1,3 @@
-import 'jquery';
 import Navigo from 'navigo';
 
 import * as homeController from 'homeController';
@@ -10,8 +9,12 @@ const hash = '#';
 
 const router = new Navigo(appRoot, useHash, hash);
 
-router
-    .navigate('#/home')
-    .on('/home', homeController.getHome)
-    .on('/movies/:category', moviesController.getMovies)
-    .resolve();
+function initRouter() {
+    router
+        .navigate('#/home')
+        .on('/home', homeController.getHome)
+        .on('/movies/:category', moviesController.getMovies)
+        .resolve();
+}
+
+export { initRouter };

@@ -8,19 +8,23 @@ System.config({
         'systemjs-babel-build': '/libs/systemjs-plugin-babel/systemjs-babel-browser.js',
 
         // libs
-        'jquery': '/libs/jquery/dist/jquery.js',
-        'bootstrap': '/libs/bootstrap/dist/js/bootstrap.min.js',
-        'navigo': '/libs/navigo/lib/navigo.min.js',
         'handlebars': '/libs/handlebars/dist/handlebars.min.js',
+        'jquery': '/libs/jquery/dist/jquery.js',
+        'navigo': '/libs/navigo/lib/navigo.min.js',
 
-        // app
-        'main': '/scripts/main.js',
+        // app main
+        'app': '/scripts/app.js',
+
+        // app routes
+        'router': '/scripts/routes/router.js',
+        'homeController': '/scripts/routes/home.controller.js',
+        'moviesController': '/scripts/routes/movies.controller.js',
+
+        // app data
+        'homeData': '/scripts/data/home.data.js',
+
+        // app utils
         'requester': '/scripts/utils/requester.js',
-        'data': '',
         'templates': '/scripts/utils/template.compiler.js',
-
-        // controllers
-        'homeController': '/scripts/controllers/home.controller.js',
-        'moviesController': '/scripts/controllers/movies.controller.js',
     },
 });

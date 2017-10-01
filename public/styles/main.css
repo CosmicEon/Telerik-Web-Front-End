@@ -7,6 +7,8 @@
   src: url("../fonts/DroidSans.ttf") format("truetype"); }
 
 body {
+  margin: 0px;
+  padding: 0px;
   font-size: 18px;
   font-family: 'LeagueGothic';
   background: linear-gradient(to right, #1d1d1d 0%, #323232 25%, #323232 75%, #1d1d1d 100%);

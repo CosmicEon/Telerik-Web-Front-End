@@ -1,6 +1,6 @@
 /* globals $ */
 
-function ajax(url, method, body, headers) {
+function ajaxCall(url, method, body, headers) {
     return new Promise((resolve, reject) => {
         $.ajax({
             url,
@@ -15,15 +15,15 @@ function ajax(url, method, body, headers) {
 }
 
 function get(url, headers = {}) {
-    return ajax(url, 'GET', '', headers);
+    return ajaxCall(url, 'GET', '', headers);
 }
 
 function post(url, body, headers = {}) {
-    return ajax(url, 'POST', JSON.stringify(body), headers);
+    return ajaxCall(url, 'POST', JSON.stringify(body), headers);
 }
 
 function put(url, body, headers = {}) {
-    return ajax(url, 'PUT', JSON.stringify(body), headers);
+    return ajaxCall(url, 'PUT', JSON.stringify(body), headers);
 }
 
 export { get, post, put };
