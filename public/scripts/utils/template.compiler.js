@@ -3,7 +3,7 @@ import { get as getTemplate } from 'requester';
 
 const cachedTemplates = {};
 
-function tamplateLoader(templateName) {
+function templateLoader(templateName) {
     return new Promise((resolve, reject) => {
         if (cachedTemplates[templateName]) {
             return resolve(cachedTemplates[templateName]);
@@ -19,4 +19,4 @@ function tamplateLoader(templateName) {
     });
 }
 
-export { tamplateLoader };
+export { templateLoader };

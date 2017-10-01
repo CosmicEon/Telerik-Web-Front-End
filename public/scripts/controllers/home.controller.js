@@ -1,12 +1,12 @@
 /* globals $ */
 
-import { tamplateLoader } from 'templates';
+import { templateLoader } from 'templates';
 
-const $mainContainer = $('#main-test');
+const $mainContainer = $('#main-content');
 const templateName = 'home';
 
 function getHome() {
-    return tamplateLoader(templateName)
+    return templateLoader(templateName)
         .then((template) => {
             // this is used if data is passed on template
             // $mainContainer.html(template(data));
