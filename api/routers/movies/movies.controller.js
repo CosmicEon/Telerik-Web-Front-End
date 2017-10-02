@@ -14,6 +14,7 @@ const moviesController = (data) => {
 
     const getMovieById = (req, res) => {
         const id = parseInt(req.params.id, 10); // returns string
+
         data.movies.getMovieById(id)
             .then((movie) => {
                 res.status(200)
@@ -25,10 +26,9 @@ const moviesController = (data) => {
     };
 
     const getMovieByCategoryAndSubcategory = (req, res) => {
-        console.log(req.params);
-
         const firstCategory = req.params.category;
         const secondCategory = req.params.subcategory;
+
         data.movies.getMovieByCategoryAndSubcategory(firstCategory, secondCategory, maxSearchMovies)
             .then((movie) => {
                 res.status(200)
@@ -40,7 +40,6 @@ const moviesController = (data) => {
     };
 
     const getMovieByCategory = (req, res) => {
-        console.log(req.params);
         const category = req.params.category;
 
         data.movies.getMovieByCategory(category, maxSearchMovies)

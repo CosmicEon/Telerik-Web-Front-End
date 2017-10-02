@@ -8,9 +8,28 @@
     src: url('../fonts/DroidSans.ttf') format('truetype');
 }
 
+html,
+body,
+header,
+main,
+section,
+footer,
+nav,
+button,
+div,
+ul,
+li,
+a,
+i {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
 body {
-    margin: 0px;
-    padding: 0px;
     font-size: 18px;
     font-family: 'LeagueGothic';
     background: linear-gradient(to right, #1d1d1d 0%, #323232 25%, #323232 75%, #1d1d1d 100%);
@@ -26,13 +45,15 @@ body {
 .header {
     nav.header-nav {
         display: inline-block;
+        margin: 10px; // padding: 10px;
         ul.header-nav-menu {
             margin-left: 33px;
             li {
                 display: inline-block;
-                margin: 0px 8px;
                 /* .header-nav-a ??? */
                 a {
+                    padding: 9px;
+                    border-radius: 10px 10px 0px 0px;
                     text-decoration: none;
                     color: white;
                     font-size: 25px; // &.btn-home {
@@ -45,8 +66,14 @@ body {
                 ul.header-subnav-menu {
                     display: none;
                     position: absolute;
+                    background-color: #222222;
+                    border-radius: 10px;
                     li {
                         display: block;
+                        padding: 0px 10px;
+                        i {
+                            padding: 8px;
+                        }
                     }
                 }
                 &:hover {
@@ -85,18 +112,34 @@ body {
     }
 }
 
-.main-nav {
-    .main-nav-menu {
-        margin-left: 720px;
-        margin-top: 760px;
-        li {
-            display: inline-block;
-            margin: 0px 8px;
-            a {
-                text-decoration: none;
-                color: white;
-                font-size: 32px;
+main {
+    article {
+        float: left;
+        width: 150px;
+        color: white;
+        background-color: gray;
+    }
+    .main-nav {
+        .main-nav-menu {
+            // margin-left: 720px;
+            // margin-top: 760px;
+            li {
+                display: inline-block;
+                margin: 0px 8px;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 32px;
+                }
             }
         }
+    }
+}
+
+footer {
+    div.footer-widget {
+        float: left;
+        width: 250px;
+        color: white;
     }
 }

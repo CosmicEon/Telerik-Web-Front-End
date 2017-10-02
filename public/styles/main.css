@@ -6,9 +6,27 @@
   font-family: 'DroidSans';
   src: url("../fonts/DroidSans.ttf") format("truetype"); }
 
+html,
+body,
+header,
+main,
+section,
+footer,
+nav,
+button,
+div,
+ul,
+li,
+a,
+i {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
 body {
-  margin: 0px;
-  padding: 0px;
   font-size: 18px;
   font-family: 'LeagueGothic';
   background: linear-gradient(to right, #1d1d1d 0%, #323232 25%, #323232 75%, #1d1d1d 100%);
@@ -19,14 +37,16 @@ body {
   margin-left: 66px; }
 
 .header nav.header-nav {
-  display: inline-block; }
+  display: inline-block;
+  margin: 10px; }
   .header nav.header-nav ul.header-nav-menu {
     margin-left: 33px; }
     .header nav.header-nav ul.header-nav-menu li {
       display: inline-block;
-      margin: 0px 8px;
       /* .header-nav-a ??? */ }
       .header nav.header-nav ul.header-nav-menu li a {
+        padding: 9px;
+        border-radius: 10px 10px 0px 0px;
         text-decoration: none;
         color: white;
         font-size: 25px; }
@@ -34,9 +54,14 @@ body {
         color: #dcc08e; }
       .header nav.header-nav ul.header-nav-menu li ul.header-subnav-menu {
         display: none;
-        position: absolute; }
+        position: absolute;
+        background-color: #222222;
+        border-radius: 10px; }
         .header nav.header-nav ul.header-nav-menu li ul.header-subnav-menu li {
-          display: block; }
+          display: block;
+          padding: 0px 10px; }
+          .header nav.header-nav ul.header-nav-menu li ul.header-subnav-menu li i {
+            padding: 8px; }
       .header nav.header-nav ul.header-nav-menu li:hover > a {
         background-color: #222222;
         color: #dcc08e; }
@@ -58,13 +83,21 @@ body {
     height: 15px;
     width: 15px; }
 
-.main-nav .main-nav-menu {
-  margin-left: 720px;
-  margin-top: 760px; }
-  .main-nav .main-nav-menu li {
-    display: inline-block;
-    margin: 0px 8px; }
-    .main-nav .main-nav-menu li a {
-      text-decoration: none;
-      color: white;
-      font-size: 32px; }
+main article {
+  float: left;
+  width: 150px;
+  color: white;
+  background-color: gray; }
+
+main .main-nav .main-nav-menu li {
+  display: inline-block;
+  margin: 0px 8px; }
+  main .main-nav .main-nav-menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 32px; }
+
+footer div.footer-widget {
+  float: left;
+  width: 250px;
+  color: white; }

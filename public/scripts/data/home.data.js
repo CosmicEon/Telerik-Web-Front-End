@@ -1,5 +1,7 @@
+import * as requester from 'requester';
+
 function getAll() {
-    return console.log('Error: Not Implemented.');
+    return requester.get('/movies/');
 }
 
 export { getAll };

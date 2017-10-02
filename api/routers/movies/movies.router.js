@@ -6,24 +6,19 @@ const attach = (app, data) => {
 
     router
         .get('/', (req, res) => {
-            console.log('GET /movies/');
+            // console.log('GET /movies/');
             return moviesController.getAllMovies(req, res);
         })
         .get('/:id', (req, res) => {
-            // const params = parseInt(req.params.id, 10);
-            // if (isNaN(params)) {
-            //     console.log('GET /movies/:category');
-            //     return moviesController.getMovieByCategory(req, res);
-            // }
-            console.log('GET /movies/:id');
+            // console.log('GET /movies/:id');
             return moviesController.getMovieById(req, res);
         })
         .get('/category/:category/:subcategory', (req, res) => {
-            console.log('GET /movies/:category/:subcategory');
+            // console.log('GET /movies/:category/:subcategory');
             return moviesController.getMovieByCategoryAndSubcategory(req, res);
         })
         .get('/category/:category', (req, res) => {
-            console.log('GET /movies/:category');
+            // console.log('GET /movies/:category');
             return moviesController.getMovieByCategory(req, res);
         });
 

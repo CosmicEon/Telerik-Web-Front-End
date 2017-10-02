@@ -22,6 +22,7 @@ System.config({
 
         // app data
         'homeData': '/scripts/data/home.data.js',
+        'movieData': '/scripts/data/movie.data.js',
 
         // app utils
         'requester': '/scripts/utils/requester.js',

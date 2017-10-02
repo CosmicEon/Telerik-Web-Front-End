@@ -14,7 +14,7 @@ function templateLoader(templateName) {
             .then((template) => {
                 const compiledTemplate = Handlebars.compile(template);
                 cachedTemplates[compiledTemplate] = compiledTemplate;
-                return resolve(compiledTemplate());
+                return resolve(compiledTemplate);
             });
     });
 }

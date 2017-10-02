@@ -13,7 +13,8 @@ function initRouter() {
     router
         .navigate('#/home')
         .on('/home', homeController.getHome)
-        .on('/movies/:category', moviesController.getMovies)
+        .on('/movies/:category', moviesController.getMoviesByCategory)
+        .on('/movies/:category/:subcategory', moviesController.getMoviesByCategoryAndSubcategory)
         .resolve();
 }
 
