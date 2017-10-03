@@ -1,0 +1,24 @@
+<ul class="main-nav-menu">
+    <li><a href=""></a></li>
+    {{#each this}}
+        {{#if category}}
+            {{#if subcategory}}
+                {{#if @first}}
+                {{else}}
+                    <li><a href="#/{{category}}/{{subcategory}}/{{@index}}">{{@index}}</a></li>
+                {{/if}}
+            {{else}}
+                {{#if @first}}
+                {{else}}
+                    <li><a href="#/{{category}}/{{@index}}">{{@index}}</a></li>
+                {{/if}}
+            {{/if}}
+        {{else}}
+            {{#if @first}}
+            {{else}}
+                <li><a href="#/home/{{@index}}">{{@index}}</a></li>
+            {{/if}}
+        {{/if}}
+    {{/each}}
+    <li><a href="">»</a></li>
+</ul>
