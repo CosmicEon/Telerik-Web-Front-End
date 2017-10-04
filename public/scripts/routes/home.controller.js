@@ -4,8 +4,8 @@ import { templateLoader } from 'templates';
 import * as homeData from 'homeData';
 
 const $mainContainer = $('#main-content');
-const $mainNav = $('.main-nav');
-const templateName = 'home';
+const $mainNav = $('.main-paging');
+const templateName = 'movies';
 const templateNav = 'nav';
 const returnSize = 11;
 

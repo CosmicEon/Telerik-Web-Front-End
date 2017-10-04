@@ -1,5 +1,5 @@
-const maxReturn = 64;
-const maxSearchMovies = 16;
+const maxReturn = 55;
+const maxSearchMovies = 9;
 const moviesController = (data) => {
     const getAllMovies = (req, res) => {
         data.movies.getAllMovies(maxReturn)
@@ -31,7 +31,11 @@ const moviesController = (data) => {
 
         data.movies.getMovieByCategoryAndSubcategory(firstCategory, secondCategory, maxSearchMovies)
             .then((movie) => {
-                
+                for (const i in movie) {
+                    movie[i].category = firstCategory;
+                    movie[i].subcategory = secondCategory;
+
+                }
                 // console.log(JSON.stringify(movie));
                 res.status(200)
                     .json(movie);
@@ -46,6 +50,9 @@ const moviesController = (data) => {
 
         data.movies.getMovieByCategory(category, maxSearchMovies)
             .then((movie) => {
+                for (const i in movie) {
+                    movie[i].category = category;
+                }
                 res.status(200)
                     .json(movie);
             })

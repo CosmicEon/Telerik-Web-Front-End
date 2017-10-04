@@ -5,11 +5,7 @@
 @media (max-width: 1600px) {}
 
 @media (min-width: 1601px) {
-    .hidden-lg {
-        display: none !important;
-        .hiden-nested {
-            background-color: #ccc;
-            color: black;
-        }
+    body {
+        width: 1680px;
     }
 }
