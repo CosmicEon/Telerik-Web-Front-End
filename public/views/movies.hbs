@@ -1,20 +1,18 @@
 {{#each this}}
 <article>
     <div class="article-container-head">
-        <div class="article-poster">
-        {{#if category}}
-            <div class="article-category to-uppercase">{{category}}</div>
-            <p class="article-year to-uppercase">{{year}}</p>
-            <img src="{{imgSrc}}" alt="movie poster">
-        {{else}}
-            <div class="article-category to-uppercase">{{genres.[0]}}</div>
-            <p class="article-year to-uppercase">{{year}}</p>
-            <img src="{{imgSrc}}" alt="movie poster">
-        {{/if}}
-        </div>
+    {{#if category}}
+        <div class="article-category to-uppercase">{{category}}</div>
+        <p class="article-year to-uppercase">{{year}}</p>
+        <img class="poster-img" src="{{imgSrc}}" alt="movie poster">
+    {{else}}
+        <div class="article-category to-uppercase">{{genres.[0]}}</div>
+        <p class="article-year to-uppercase">{{year}}</p>
+        <img  class="poster-img" src="{{imgSrc}}" alt="movie poster">
+    {{/if}}
     </div>
     <div class="article-container-main">
-        <h2>{{title}}</h2>
+        <h2 class="to-uppercase">{{title}}</h2>
         <p class="to-uppercase">Director: {{director}}</p>
     </div>
     <div class="article-text-a">

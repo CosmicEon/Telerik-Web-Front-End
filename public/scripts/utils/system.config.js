@@ -27,6 +27,7 @@ System.config({
         'moviePostData': '/scripts/data/movie.post.data.js',
 
         // app utils
+        'utils': '/scripts/utils/utils.js',
         'requester': '/scripts/utils/requester.js',
         'templates': '/scripts/utils/template.compiler.js',
     },

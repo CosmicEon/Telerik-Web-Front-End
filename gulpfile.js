@@ -32,7 +32,7 @@ gulp.task('dev:page', () => {
 gulp.task('dev:server', () => {
     nodemon({
         script: 'server.js',
-        ext: 'js html',
+        ext: 'html js css scss hbs',
         env: { 'NODE_ENV': 'development' },
     });
 });
@@ -43,7 +43,7 @@ gulp.task('dev:watch', () => {
     gulp.watch(folder.src + '*.html', ['dev:html']);
 
     // sass changes
-    gulp.watch(folder.src + 'styles/**/*', ['dev:sass']);
+    gulp.watch(folder.src + 'styles/sass/**/*', ['dev:sass']);
 
     // javascript changes
     gulp.watch(folder.src + 'scripts/**/*', ['dev:js']);
@@ -58,9 +58,9 @@ gulp.task('dev:html', () => {
 });
 
 gulp.task('dev:sass', () => {
-    return gulp.src(folder.src + 'styles/**/*.scss')
+    return gulp.src(folder.src + 'styles/sass/**/*')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(folder.src + 'styles/'));
+        .pipe(gulp.dest(folder.src + 'styles/css/'));
 });
 
 gulp.task('dev:js', () => {
@@ -71,19 +71,31 @@ gulp.task('dev:js', () => {
 
 
 // BUILD MODE
-gulp.task('build:all', ['build:html', 'build:css', 'build:js']);
+gulp.task('build:all', ['build:html', 'build:css', 'build:js', 'copy:assets']);
+
+gulp.task('copy:assets', ['copy:fonts', 'copy:images']);
+
+gulp.task('copy:fonts', () => {
+    return gulp.src(folder.src + 'assets/fonts/**/*')
+        .pipe(gulp.dest(folder.dest + 'assets/fonts/'));
+});
+
+gulp.task('copy:images', () => {
+    return gulp.src(folder.src + 'assets/images/**/*')
+        .pipe(gulp.dest(folder.dest + 'assets/images/'));
+});
 
 gulp.task('build:html', () => {
     return gulp.src(folder.src + '*.html')
-        .pipe(newer(folder.dest)) // checks if src files are newer than in dest folder
+        .pipe(newer(folder.dest))
         .pipe(htmlclean())
         .pipe(gulp.dest(folder.dest));
 });
 
 gulp.task('build:css', () => {
-    return gulp.src(folder.src + 'styles/**/*.scss')
+    return gulp.src(folder.src + 'styles/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(folder.dest + 'styles/'));
+        .pipe(gulp.dest(folder.dest + 'styles/css/'));
 });
 
 gulp.task('build:js', () => {
@@ -93,7 +105,7 @@ gulp.task('build:js', () => {
             presets: ['env'],
         }))
         .pipe(deporder()) // reads dependencies on js files
-        .pipe(concat('main.js'))
+        .pipe(concat('app.js'))
         .pipe(uglify())
         .pipe(gulp.dest(folder.dest + 'scripts/'));
 });

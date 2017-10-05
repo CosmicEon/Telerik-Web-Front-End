@@ -1,0 +1,23 @@
+@media screen and (max-width: 360px) {}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 1600px) {
+    body {
+        width: 1680px; //for development
+        main {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 1601px) {
+    body {
+        width: 1680px; //for development
+        main {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

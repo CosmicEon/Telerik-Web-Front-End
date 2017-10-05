@@ -2,6 +2,7 @@
 
 import { templateLoader } from 'templates';
 import * as movieData from 'movieData';
+import * as utils from 'utils';
 
 const $mainContainer = $('#main-content');
 const $mainNav = $('.main-paging');
@@ -23,6 +24,8 @@ function getMoviesByCategory(params) {
 
             $mainContainer.html(home(data));
             $mainNav.html(nav(navData));
+
+            utils.checkSpaceForAside();
         })
         .catch((err) => {
             return console.log(err);
@@ -44,6 +47,8 @@ function getMoviesByCategoryAndSubcategory(params) {
 
             $mainContainer.html(home(data));
             $mainNav.html(nav(navData));
+
+            utils.checkSpaceForAside();
         })
         .catch((err) => {
             return console.log(err);

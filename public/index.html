@@ -7,22 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movies Forum</title>
     <!-- Bootstrap -->
-    <!-- <link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css"> -->
-    <!-- <script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script> -->
-    <link rel="stylesheet" type="text/css" href="/styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+    <script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles/css/reset.css">
     <!-- css -->
-    <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="/styles/media.queries.css">
+    <link rel="stylesheet" type="text/css" href="/styles/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/css/media.queries.css">
 </head>
 
 <body>
     <header class="header">
         <!-- Logo -->
-        <div id="container-logo">
-            <img class="header-logo" src="/images/Logo.png" alt="logo">
-        </div>
-        <!-- Main nav menu -->
+        <a href="#/home/1" id="container-logo" title="Home">
+            <img class="header-logo" src="/assets/images/logo.png" alt="logo">
+        </a>
+        <!-- Header Nav -->
         <nav class="header-nav">
+            <!-- Nav Dropdown -->
             <ul class="header-nav-menu">
                 <li><a href="#/home/1" class="btn-home">HOME</a></li>
                 <li class="header-nav-li"><a href="#/movies/action/1" class="header-nav-a">ACTION</a>
@@ -134,17 +135,46 @@
                     </ul>
                 </li>
             </ul>
+            <!-- Nav Search bar -->
+            <div class="search-field"><input type="text" placeholder="Search this website..."><img src="/assets/images/search-icon.png" alt="search icon"></div>
         </nav>
-        <!-- Search bar -->
-        <div class="search-field"><input type="text" placeholder="Search this website..."><img src="./images/Search-icon.png" alt="search icon"></div>
     </header>
 
     <main>
         <section id="main-content">
             <!-- Main content will display here -->
+
         </section>
+        <aside>
+            <div class="aside-widget hidden">
+                <div class="aside-component">
+                    <h3>RECENT COMMENTS</h3>
+                    <ul class="aside-ul">
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Fusce suscipit sapien sit amet </a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Sapien placerat ultrices</a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Vivamus sed massa ac metus</a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Posuere lorem sed ipsum </a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Quis eleifend ut sodales</a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Integer felis eu ipsum</a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Sed pharetra eleifend ante</a></li>
+                    </ul>
+                </div>
+                <div class="aside-component">
+                    <h3>RECENT POSTS</h3>
+                    <ul class="aside-ul">
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Fusce suscipit sapien sit amet </a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Sapien placerat ultrices</a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Vivamus sed massa ac metus</a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Posuere lorem sed ipsum </a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Quis eleifend ut sodales</a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Integer felis eu ipsum</a></li>
+                        <li><a class="aside-a" href=""><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Sed pharetra eleifend ante</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
         <nav class="main-paging">
-            <!-- Nav content will display here -->
+            <!-- Main Paging content will display here -->
         </nav>
     </main>
 

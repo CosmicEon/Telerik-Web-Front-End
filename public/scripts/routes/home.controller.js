@@ -2,6 +2,7 @@
 
 import { templateLoader } from 'templates';
 import * as homeData from 'homeData';
+import * as utils from 'utils';
 
 const $mainContainer = $('#main-content');
 const $mainNav = $('.main-paging');
@@ -28,6 +29,7 @@ function getHome(params) {
             $mainContainer.html(home(pageData));
             $mainNav.html(nav(navData));
 
+            utils.checkSpaceForAside();
             // router.initRouter();
         })
         .catch((err) => {

@@ -13,10 +13,11 @@ const init = (data) => {
     // Load static content
     app.use('/', express.static('public'));
     app.use('/libs', express.static('node_modules'));
+    app.use('/dist', express.static('dist'));
 
     // Middlewares
     app.use(cors());
-    app.use(morgan('combined', {
+    app.use(morgan('dev', {
         skip: (req, res) => {
             return res.statusCode < 400;
         },
