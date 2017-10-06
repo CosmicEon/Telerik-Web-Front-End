@@ -119,16 +119,39 @@ body {
 }
 
 
-/* Main */
+/* Main -> Movies */
 
 main {
     margin: 20px 75px;
+    /* Main Paging Top */
+    ul.main-paging-top {
+        display: block;
+        margin-left: 12px;
+        font-size: 17px;
+        li {
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 5px;
+            a {
+                text-decoration: none;
+                text-transform: capitalize;
+                color: #686767;
+                &:last-child {
+                    color: #8e8e8e;
+                }
+            }
+            i {
+                margin: 0px 5px 0px 10px;
+                color: #686767;
+            }
+        }
+    }
+    /* Main  Section */
     #main-content {
         width: 100%;
         height: 1010px; // margin-bottom: 38px;
-        // float: left;
-        display: inline-block;
-        /* Main  Article */
+        float: left; // display: inline-block;
+        /* Main  Section Article */
         article {
             float: left;
             width: 229px;
@@ -214,20 +237,24 @@ main {
     }
     /* Main Aside*/
     aside {
-        height: 100%;
+        float: left; // height: 100%;
         margin: 0;
-        display: inline-block;
+        display: block;
         .aside-widget {
-            margin: 20px;
+            // height: 100%;
+            margin: 33px 0px 20px 16px;
             div.aside-component {
                 width: 230px;
-                height: 280px; // padding-top: 16px;
+                height: 280px;
+                margin-bottom: 22px; // padding-top: 16px;
                 // padding-left: 18px;
                 background-color: #e7e7e7;
+                background-image: url('../../assets/images/article-b-border.png');
+                background-position: bottom left;
+                background-repeat: repeat-x;
                 h3 {
-                    padding: 15px;
-                    margin-bottom: 5px;
-                    font-size: 33px;
+                    padding: 16px; // margin-bottom: 5px;
+                    font-size: 30px;
                     color: #9a1d0d;
                 }
                 ul.aside-ul {
@@ -235,26 +262,24 @@ main {
                     display: inline-block;
                     width: 100%;
                     font-family: 'Myriad Pro';
-                    
                     li {
-                        padding: 5px 5px 5px 5px;
-                        font-size: 10px;
+                        padding: 8px 5px 5px 5px;
+                        font-size: 15px;
                         a.aside-a {
                             text-decoration: none;
-
+                            color: #898484;
                             img {
-                                padding: 5px 5px 5px 5px;
+                                padding: 5px 14px 5px 11px;
                             }
                         }
                     }
                 }
-                &:first-child {
-                }
+                &:first-child {}
             }
         }
     }
-    /* Main  Paging */
-    nav.main-paging {
+    /* Main  Paging Bottom */
+    nav.main-paging-bottom {
         clear: both;
         display: inline-block;
         width: 100%;
@@ -279,6 +304,35 @@ main {
             }
         }
     }
+}
+
+
+/* Main -> Movies */
+
+main {
+    // /* Main Paging Top */
+    // ul.main-paging-top {
+    //     display: block;
+    //     margin-left: 12px;
+    //     font-size: 17px;
+    //     li {
+    //         display: inline-block;
+    //         text-decoration: none;
+    //         margin-top: 5px;
+    //         a {
+    //             text-decoration: none;
+    //             text-transform: capitalize;
+    //             color: #686767;
+    //             &:last-child {
+    //                 color: #8e8e8e;
+    //             }
+    //         }
+    //         i {
+    //             margin: 0px 5px 0px 10px;
+    //             color: #686767;
+    //         }
+    //     }
+    // }
 }
 
 
@@ -340,4 +394,8 @@ footer {
 
 .activate-aside {
     width: 76%;
+}
+
+.active-state {
+    color: #dcc08e;
 }

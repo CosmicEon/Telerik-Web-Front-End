@@ -1,4 +1,23 @@
 {{#each this}}
+    {{#if @first}}
+        {{#if subcategory}}
+        <ul class="main-paging-top">
+            <li><a href="#/home/1">Home</a><i>»</i></li>
+            <li><a href="#/movies/{{category}}/1">{{category}}</a><i>»</i></li>
+            <li><a href="#/movies/{{subcategory}}/1">{{subcategory}}</a></li>
+        </ul>
+        {{else}}
+            {{#if category}}
+            <ul class="main-paging-top">
+                <li><a href="#/home/1">Home</a><i>»</i></li>
+                <li><a href="#/movies/{{category}}/1">{{category}}</a></li>
+            </ul>
+            {{/if}}
+        {{/if}}
+    {{/if}}
+{{/each}}
+
+{{#each this}}
 <article>
     <div class="article-container-head">
     {{#if category}}
@@ -16,7 +35,7 @@
         <p class="to-uppercase">Director: {{director}}</p>
     </div>
     <div class="article-text-a">
-        <a href="#/post/movie/{{id}}">Read more...</a>
+        <a href="#/post/movie/{{id}}">See more about it...</a>
     </div>
 </article>
 {{/each}}

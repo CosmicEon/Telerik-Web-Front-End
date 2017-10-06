@@ -1,6 +1,14 @@
 import Handlebars from 'handlebars';
 import { get as getTemplate } from 'requester';
 
+Handlebars.registerHelper('ifCategory', (item, category, subcategory, options) => {
+    if (item.category === category && item.subcategory !== subcategory) {
+        return options.fn(this);
+    } else {
+        return options.fn(this);
+    }
+});
+
 const cachedTemplates = {};
 
 function templateLoader(templateName) {

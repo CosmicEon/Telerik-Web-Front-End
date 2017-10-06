@@ -5,9 +5,14 @@ import * as movieData from 'movieData';
 import * as utils from 'utils';
 
 const $mainContainer = $('#main-content');
-const $mainNav = $('.main-paging');
-const templateName = 'movies';
-const templateNav = 'nav';
+const $mainNav = $('.main-paging-bottom');
+const $mainAside = $('.aside-widget');
+const $footer = $('footer');
+
+const templateName = 'home/movies';
+const templateNav = 'home/nav';
+const templateAside = 'home/aside';
+const templateFooter = 'footer';
 const returnSize = 11;
 
 function getMoviesByCategory(params) {
@@ -16,14 +21,18 @@ function getMoviesByCategory(params) {
     Promise.all([
         templateLoader(templateName),
         templateLoader(templateNav),
+        templateLoader(templateAside),
+        templateLoader(templateFooter),
         movieData.getByCategory(category),
     ])
-        .then(([home, nav, data]) => {
+        .then(([home, nav, aside, footer, data]) => {
             const navMaxLength = Math.ceil(data.length / returnSize) + 1;
             const navData = data.slice(0, navMaxLength);
 
             $mainContainer.html(home(data));
             $mainNav.html(nav(navData));
+            $mainAside.html(aside); // data can be injected here
+            $footer.html(footer); // data can be injected here
 
             utils.checkSpaceForAside();
         })
@@ -39,14 +48,18 @@ function getMoviesByCategoryAndSubcategory(params) {
     Promise.all([
         templateLoader(templateName),
         templateLoader(templateNav),
+        templateLoader(templateAside),
+        templateLoader(templateFooter),
         movieData.getByCategoryAndSubcategory(category, subcategory),
     ])
-        .then(([home, nav, data]) => {
+        .then(([home, nav, aside, footer, data]) => {
             const navMaxLength = Math.ceil(data.length / returnSize) + 1;
             const navData = data.slice(0, navMaxLength);
 
             $mainContainer.html(home(data));
             $mainNav.html(nav(navData));
+            $mainAside.html(aside); // data can be injected here
+            $footer.html(footer); // data can be injected here
 
             utils.checkSpaceForAside();
         })
