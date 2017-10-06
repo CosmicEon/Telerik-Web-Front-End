@@ -24,6 +24,7 @@ function getMoviesByCategory(params) {
         templateLoader(templateAside),
         templateLoader(templateFooter),
         movieData.getByCategory(category),
+        // movieData.getByCategoryAndSubcategory(category, {}), // for testing
     ])
         .then(([home, nav, aside, footer, data]) => {
             const navMaxLength = Math.ceil(data.length / returnSize) + 1;
@@ -34,7 +35,7 @@ function getMoviesByCategory(params) {
             $mainAside.html(aside); // data can be injected here
             $footer.html(footer); // data can be injected here
 
-            utils.checkSpaceForAside();
+            utils.insertAside();
         })
         .catch((err) => {
             return console.log(err);
@@ -61,7 +62,7 @@ function getMoviesByCategoryAndSubcategory(params) {
             $mainAside.html(aside); // data can be injected here
             $footer.html(footer); // data can be injected here
 
-            utils.checkSpaceForAside();
+            utils.insertAside();
         })
         .catch((err) => {
             return console.log(err);

@@ -21,6 +21,4 @@ function initRouter() {
         .resolve();
 }
 
-utils.checkSpaceForAside();
-
 export { initRouter };

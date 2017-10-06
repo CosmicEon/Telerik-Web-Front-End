@@ -34,7 +34,7 @@ function getHome(params) {
             $mainNav.html(nav(navData));
             $footer.html(footer); // data can be injected here
 
-            utils.checkSpaceForAside();
+            utils.insertAside();
             // router.initRouter();
         })
         .catch((err) => {

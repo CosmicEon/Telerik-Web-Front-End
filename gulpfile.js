@@ -95,7 +95,7 @@ gulp.task('build:html', () => {
 gulp.task('build:css', () => {
     return gulp.src(folder.src + 'styles/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(folder.dest + 'styles/css/'));
+        .pipe(gulp.dest(folder.dest + 'styles/'));
 });
 
 gulp.task('build:js', () => {
