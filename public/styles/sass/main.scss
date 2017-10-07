@@ -1,3 +1,4 @@
+// sass-lint:disable indentation
 @font-face {
     font-family: 'LeagueGothic';
     src: url('../../assets/fonts/LeagueGothic-Regular.otf') format('opentype');
@@ -9,17 +10,17 @@
 }
 
 body {
-    font-size: 18px;
-    font-family: 'LeagueGothic';
     background: linear-gradient(to right, #1d1d1d 0%, #323232 25%, #323232 75%, #1d1d1d 100%);
+    font-family: 'LeagueGothic';
+    font-size: 18px;
 }
 
 
 /* Header */
 
 .header {
-    width: 100%;
     height: 100%;
+    width: 100%;
     /* Header Logo */
     .header-logo {
         display: inline-block;
@@ -311,24 +312,25 @@ main {
 /* Main -> Post */
 
 main {
+    /* Movie Post Article */
     section#main-content {
         width: 70.40%;
-        /* Main Paging Top */
+        /* Movie Post Paging Top */
         ul.main-paging-top {
             width: 70%;
         }
-        /* Main Article */
+        /* Movie Post Article Main */
         article.movie-post {
             float: left;
             width: 71.4%;
             height: 740px;
             margin: 17px 0px 0px 0px;
-            padding: 33px;
+            padding: 33px 6px 33px 33px;
             background-image: url('../../assets/images/article-b-border.png'), url('../../assets/images/article-b-border.png');
             background-repeat: repeat-x;
             background-position: top left, bottom left;
             background-color: white;
-            /* Left Side*/
+            /* Left Side */
             .movie-post-left {
                 float: left;
                 width: 200px;
@@ -351,7 +353,8 @@ main {
                         top: 34px;
                         right: 0;
                         padding: 7px 12px;
-                        font-size: 44px; // text-shadow: 2px 2px 10px #000000;
+                        font-size: 44px;
+                        text-shadow: 2px 2px 10px #000000;
                         color: white;
                     }
                     img {
@@ -416,68 +419,215 @@ main {
                     }
                 }
             }
-            /* Right Side*/
+            /* Right Side */
             .movie-post-right {
                 float: left;
                 width: 82%;
-                padding: 0px 22px;
+                padding: 0px 20px;
                 h2 {
                     font-size: 37px;
                     text-transform: uppercase;
                     color: #9a1d0d;
                 }
                 h3 {
-                    margin: 3px 0px;
-                    font-size: 23px;
+                    margin: 5px 2px;
+                    padding-bottom: 12px;
+                    font-size: 19px;
+                    border-bottom: 1px dotted gray;
                 }
                 .cast-container {
-                    font-size: 23px;
+                    font-size: 19px;
                     ul {
                         display: block;
                         li {
                             display: block;
                             margin: 4px 17px;
                             font-family: 'DroidSans';
-                            font-size: 13px; // text-transform: uppercase;
+                            font-size: 16px; // text-transform: uppercase;
                             span {
-                                color: gray;
+                                padding: 0px 6px;
+                                color: #9a1d0d;
                             }
                         }
                     }
                 }
+                .plot-summary {
+                    h4 {
+                        font-size: 19px;
+                    }
+                    p {
+                        padding: 8px 0px 0px 16px;
+                        font-family: 'DroidSans';
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
             }
         }
-    }
-    .movie-post-aside {
-        // height: 100%;
-        margin: 33px 0px 20px 16px;
-        div.post-aside-component {
-            width: 376px;
-            height: 280px;
-            margin-bottom: 22px; // padding-top: 16px;
-            // padding-left: 18px;
-            background-color: #e7e7e7;
-            background-image: url('../../assets/images/article-b-border.png');
-            background-position: bottom left;
-            background-repeat: repeat-x;
-            h4 {
-                padding: 16px; // margin-bottom: 5px;
-                font-size: 30px;
+        /* Movie Post Aside */
+        .movie-post-aside {
+            // height: 100%;
+            margin: 17px 0px 20px 16px;
+            div.post-aside-component {
+                width: 376px;
+                height: 184px;
+                margin-bottom: 18px; // padding-top: 16px;
+                // padding-left: 18px;
+                background-color: #e7e7e7;
+                background-image: url('../../assets/images/article-b-border.png');
+                background-position: bottom left;
+                background-repeat: repeat-x;
+                /* Movie Post Aside Tablist */
+                div.tablist {
+                    display: flex; // border-bottom: 2px dotted gray;
+                    // margin-bottom: -1px;
+                    button {
+                        display: block;
+                        height: 59px;
+                        width: 126px;
+                        padding: 16px 26px 10px 10px;
+                        font-size: 30px;
+                        background-color: #d6d6d6;
+                        color: #9a1d0d; // padding: 10px;
+                        border-bottom: 1px dotted gray;
+                        border-right: 1px dotted gray;
+                        &:focus {
+                            background-color: #e7e7e7;
+                            outline: none;
+                        }
+                        &.aside-btn-l {
+                            border-right: none;
+                        }
+                    }
+                }
+                div.tabcontent {
+                    ul.tabitems {
+                        &>li {
+                            display: flex;
+                            height: 68px;
+                            border-bottom: 1px dotted gray;
+                            div.img-container {
+                                display: inline-block;
+                                height: 100%;
+                                padding: 14px 0px 0px 15px;
+                                img {
+                                    height: 43px;
+                                    border: 3px solid #d6d6d6;
+                                }
+                            }
+                            div.text-container {
+                                display: inline-block;
+                                height: 100%;
+                                padding: 16px 0px 0px 8px;
+                                a {
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    h5 {
+                                        display: block;
+                                        margin-bottom: 5px;
+                                        font-size: 15px;
+                                        font-family: 'DroidSans';
+                                        font-weight: 500;
+                                        color: black;
+                                    }
+                                    p {
+                                        display: block;
+                                        padding: 0px;
+                                        margin: 7px 10px 10px 4px;
+                                        font-size: 10px;
+                                        font-family: 'Georgia';
+                                        font-style: italic;
+                                        color: #a1a1a1;
+                                    }
+                                }
+                            }
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                        }
+                    }
+                }
+                h4 {
+                    padding: 19px 19px 7px 21px; // margin-bottom: 5px;
+                    font-size: 30px;
+                    color: #9a1d0d;
+                }
+                ul.aside-ul {
+                    border-top: 1px dotted gray;
+                    display: inline-block;
+                    width: 100%;
+                    font-family: 'Myriad Pro';
+                    li {
+                        padding: 13px 5px 0px 4px;
+                        font-size: 15px;
+                        a.aside-a {
+                            text-decoration: none;
+                            color: #898484;
+                            img {
+                                padding: 5px 11px 5px 18px;
+                            }
+                        }
+                    }
+                }
+                p.post-aside-text {
+                    padding: 12px 25px 12px 22px;
+                    font-family: 'DroidSans';
+                    font-size: 13px;
+                    line-height: 19px;
+                    color: #8a8686;
+                }
+                &:first-of-type {
+                    height: 336px;
+                }
+            }
+        }
+        /* Movie Post Comments */
+        #movie-comments {
+            display: block;
+            width: 971px;
+            margin: 0px 0px 10px 229px;
+            background-color: white;
+            color: gray;
+            .movie-comment-header {
+                display: block;
+                padding: 31px 24px;
+                font-size: 40px;
+                border-bottom: 1px dotted gray;
+                text-transform: uppercase;
                 color: #9a1d0d;
             }
-            ul.aside-ul {
-                border-top: 1px dotted gray;
-                display: inline-block;
-                width: 100%;
-                font-family: 'Myriad Pro';
-                li {
-                    padding: 8px 5px 5px 5px;
-                    font-size: 15px;
-                    a.aside-a {
-                        text-decoration: none;
-                        color: #898484;
-                        img {
-                            padding: 5px 14px 5px 11px;
+            .movie-comment-container {
+                height: 100%;
+                border-bottom: 1px dotted gray;
+                .movie-comment-img {
+                    float: left;
+                    width: 11%;
+                    padding: 16px 10px 10px 30px;
+                    img {
+                        height: 64px;
+                    }
+                }
+                .movie-comment-content {
+                    float: left;
+                    width: 88%;
+                    padding: 10px 10px 10px 7px;
+                    h3 {
+                        margin-bottom: 2px;
+                        font-size: 24px;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        font-size: 20px;
+                        font-family: 'DroidSans';
+                    }
+                }
+                .movie-comment-replay {
+                    .movie-comment-container.replay-container {
+                        .replay-comment-img {
+                            width: 30%
+                        }
+                        .replay-comment-content {
+                            width: 70%;
                         }
                     }
                 }
@@ -546,6 +696,11 @@ footer {
 
 .hidden {
     display: none;
+}
+
+.inline {
+    display: block;
+    float: left;
 }
 
 .activate-aside {

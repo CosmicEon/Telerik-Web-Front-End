@@ -5,20 +5,26 @@ import * as moviePostData from 'moviePostData';
 import * as utils from 'utils';
 
 const $mainContainer = $('#main-content');
-const templateName = 'post/post.movie';
+const $commentsContainer = $('#movie-comments');
+const templateMovie = 'post/post.movie';
+const templateComments = 'post/comments';
 
 function getMovieById(params) {
     const id = params.id;
 
-
+    // utils.initializeMovieComments();
     Promise.all([
-        templateLoader(templateName),
+        templateLoader(templateMovie),
+        templateLoader(templateComments),
         moviePostData.getById(id),
     ])
-        .then(([home, data]) => {
+        .then(([movie, comments, data]) => {
             utils.initializeMoviePost();
 
-            $mainContainer.html(home(data));
+            $mainContainer.html(movie(data));
+            $commentsContainer.html(comments);
+
+            utils.tablistSwitcher();
         })
         .catch((err) => {
             return console.log(err);

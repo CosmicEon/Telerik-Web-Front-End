@@ -40,17 +40,23 @@
     </div>
     <div class="movie-post-right">
         <h2>{{title}}</h2>
-        <h3>Director: {{director}} | Metascore 
+        <h3>Director: {{director}} | Metascore
             {{#if rating}}
-            {{rating}}
+                {{rating}}
             {{else}}
-            N/A
-            {{/if}}
+                N/A
+            {{/if}} | 30 Comments
             </h3>
         <div class="cast-container">Cast :
             <ul>
             {{#each cast}}
-                <li>{{actor}} <span>as</span> {{character}}</li>
+                <li>{{actor}} <span>as</span>
+                {{#if character}}
+                    {{character}}
+                {{else}}
+                N/A
+                {{/if}}
+                </li>
             {{/each}}
             </ul>
         </div>
@@ -60,29 +66,236 @@
         </div>
     </div>
 </article>
+
 <aside>
     <div class="movie-post-aside">
         <div class="post-aside-component">
-            <h4>RECENT COMMENTS</h4>
+            <div class="tablist">
+                <button class="post-aside-btn one" >RECENT</button>
+                <button class="post-aside-btn two" >POPULAR</button>
+                <button class="post-aside-btn three aside-btn-l">RANDOM</button>
+            </div>
+
+            <div class="tabcontent">
+                <ul class="tabitems one">
+                    <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>1 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 13</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>1 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 13</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>1 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 13</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>1 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 13</p>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="tabitems two hidden">
+                    <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>2 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 14</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>2 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 14</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>2 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 14</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>2 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 14</p>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="tabitems three hidden">
+                     <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>3 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 15</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>3 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 15</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>3 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 15</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="img-container">
+                            <img src="./assets/images/picture-aside.png" alt="recent post icon">
+                        </div>
+                        <div class="text-container">
+                            <a href="#/home/1">
+                                <h5>3 Fusce suscipit sapien sit amet</h5>
+                                <p>Posted by Admin on Mar 15</p>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="post-aside-component">
+            <h4>CUSTOM TEXT WIDGET</h4>
             <ul class="aside-ul">
                 <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Fusce suscipit sapien sit amet </a></li>
                 <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Sapien placerat ultrices</a></li>
-                <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Vivamus sed massa ac metus</a></li>
-                <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Posuere lorem sed ipsum </a></li>
-                <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Quis eleifend ut sodales</a></li>
-                <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Integer felis eu ipsum</a></li>
+                <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Vivamus sed massa ac metus gravida</a></li>
             </ul>
         </div>
         <div class="post-aside-component">
-            <h4>RECENT POSTS</h4>
-            <ul class="aside-ul">
-                <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Fusce suscipit sapien sit amet </a></li>
-                <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Sapien placerat ultrices</a></li>
-                <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Vivamus sed massa ac metus</a></li>
-                <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Posuere lorem sed ipsum </a></li>
-                <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Quis eleifend ut sodales</a></li>
-                <li><a class="aside-a" href="#/home/1"><img src="./assets/images/bullet-arrow.png" alt="arrow pointer">Integer felis eu ipsum</a></li>
-            </ul>
+            <h4>CUSTOM TEXT WIDGET</h4>
+            <p class="post-aside-text">Fusce suscipit sapien sit amet sapien placerat ultrices. Vivamus sed massa ac metus gravida dignissim egestas
+                posuere lorem. Sed ipsum urna, facilisis quis eleifend ut, sodales sed lectus. Integer felis eu ipsum malesuada
+                luctus. Sed pharetra eleifend ante vitae fermentum.</p>
         </div>
     </div>
 </aside>
+
+<section id="movie-comments">
+    <div class="movie-comment-header">30 comments</div>
+    <div class="movie-comment-container">
+        <div class="movie-comment-img">
+            <img src="/assets/images/picture-comment.png" alt="comment pucture">
+        </div>
+        <div class="movie-comment-content">
+            <h3>NICK ROACH</h3>
+            <p>Fusce suscipit sapien sit amet sapien placerat ultrices. Vivamus sed massa ac metus gravida dignissim egestas posuere
+                lorem. Sed ipsum urna, facilisis quis eleifend ut, sodales sed lectus. Integer felis eu ipsum malesuada luctus.
+                Sed pharetra eleifend ante vitae fermentum. Praesent fermentum volutpat porta. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Sed pharetra eleifend ante vitae fermentum. </p>
+        </div>
+         <div class="movie-comment-replay">
+            <div class="movie-comment-container replay-container">
+                <div class="movie-comment-img replay-comment-img">
+                    <img src="/assets/images/picture-comment.png" alt="comment pucture">
+                </div>
+                <div class="movie-comment-content replay-comment-content">
+                    <h3>NICK ROACH</h3>
+                    <p>Fusce suscipit sapien sit amet sapien placerat ultrices. Vivamus sed massa ac metus gravida dignissim egestas posuere
+                        lorem. Sed ipsum urna, facilisis quis eleifend ut, sodales sed lectus. Integer felis eu ipsum malesuada luctus.
+                        Sed pharetra eleifend ante vitae fermentum. Praesent fermentum volutpat porta. Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Sed pharetra eleifend ante vitae fermentum. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="movie-comment-container">
+        <div class="movie-comment-img">
+            <img src="/assets/images/picture-comment.png" alt="comment pucture">
+        </div>
+        <div class="movie-comment-content">
+            <h3>NICK ROACH</h3>
+            <p>Fusce suscipit sapien sit amet sapien placerat ultrices. Vivamus sed massa ac metus gravida dignissim egestas posuere
+                lorem. Sed ipsum urna, facilisis quis eleifend ut, sodales sed lectus. Integer felis eu ipsum malesuada luctus.
+                Sed pharetra eleifend ante vitae fermentum. Praesent fermentum volutpat porta. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Sed pharetra eleifend ante vitae fermentum. </p>
+        </div>
+    </div>
+    <div class="movie-comment-container">
+        <div class="movie-comment-img">
+            <img src="/assets/images/picture-comment.png" alt="comment pucture">
+        </div>
+        <div class="movie-comment-content">
+            <h3>NICK ROACH</h3>
+            <p>Fusce suscipit sapien sit amet sapien placerat ultrices. Vivamus sed massa ac metus gravida dignissim egestas posuere
+                lorem. Sed ipsum urna, facilisis quis eleifend ut, sodales sed lectus. Integer felis eu ipsum malesuada luctus.
+                Sed pharetra eleifend ante vitae fermentum. Praesent fermentum volutpat porta. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Sed pharetra eleifend ante vitae fermentum. </p>
+        </div>
+    </div>
+    <div class="movie-comment-container">
+        <div class="movie-comment-img">
+            <img src="/assets/images/picture-comment.png" alt="comment pucture">
+        </div>
+        <div class="movie-comment-content">
+            <h3>NICK ROACH</h3>
+            <p>Fusce suscipit sapien sit amet sapien placerat ultrices. Vivamus sed massa ac metus gravida dignissim egestas posuere
+                lorem. Sed ipsum urna, facilisis quis eleifend ut, sodales sed lectus. Integer felis eu ipsum malesuada luctus.
+                Sed pharetra eleifend ante vitae fermentum. Praesent fermentum volutpat porta. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Sed pharetra eleifend ante vitae fermentum. </p>
+        </div>
+    </div>
+</section>

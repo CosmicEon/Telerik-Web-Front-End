@@ -22,14 +22,40 @@ function insertAside() {
 
 function initializeMoviePost() {
     $pagingBottom.html('');
-    $asideElement.removeClass('hidden');
+
+
     $mainElement.css('margin', '10px 0px');
-    // $pagingTop.addClass('movie-post-paging');
+    $sectionElement.css('width', '100%');
+    // $sectionElement.after('<section id="movie-comments"></section>');
     $pagingTop.css('margin-left', '83px');
-    // $pagingTop.css('margin-bottom', '13px');
+    $asideElement.addClass('hidden');
+}
+function initializeMovieComments() {
+    return $sectionElement.after('<section id="movie-comments"></section>');
+}
+
+function tablistSwitcher() {
+    $('button.post-aside-btn').on('click', (ev) => {
+        const $tabitemsList = $('ul.tabitems');
+        const $eventTarget = $(ev.target);
+
+        $tabitemsList.addClass('hidden');
+
+        if ($eventTarget.hasClass('one')) {
+            $tabitemsList.eq(0).removeClass('hidden');
+        } else if ($eventTarget.hasClass('two')) {
+            $tabitemsList.eq(1).removeClass('hidden');
+        } else if ($eventTarget.hasClass('three')) {
+            $tabitemsList.eq(2).removeClass('hidden');
+        }
+
+        // $(this).removeClass('selected');
+    });
 }
 
 export {
     insertAside,
     initializeMoviePost,
+    initializeMovieComments,
+    tablistSwitcher,
 };
