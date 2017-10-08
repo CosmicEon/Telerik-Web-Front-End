@@ -27,6 +27,16 @@ function getHome(params) {
     ])
         .then(([home, nav, footer, data]) => {
             const pageData = data.slice(startIndex, endIndex);
+
+            pageData.forEach((item, index) => {
+                if (index === 1) {
+                    item.description = item.description.slice(0, 76);
+                    return item;
+                }
+                item.description = item.description.slice(0, 31);
+                return item;
+            });
+
             const navMaxLength = Math.ceil(data.length / returnSize) + 1;
             const navData = pageData.slice(0, navMaxLength);
 
@@ -35,7 +45,6 @@ function getHome(params) {
             $footer.html(footer); // data can be injected here
 
             utils.insertAside();
-            // router.initRouter();
         })
         .catch((err) => {
             return console.log(err);

@@ -42,9 +42,9 @@
         <h2>{{title}}</h2>
         <h3>Director: {{director}} | Metascore
             {{#if rating}}
-                {{rating}}
+               <span>{{rating}}</span>
             {{else}}
-                N/A
+               <span>N/A</span>
             {{/if}} | 30 Comments
             </h3>
         <div class="cast-container">Cast :
@@ -236,7 +236,7 @@
 
 <section id="movie-comments">
     <div class="movie-comment-header">30 comments</div>
-    <div class="movie-comment-container">
+    <div class="movie-comment-container first-comment">
         <div class="movie-comment-img">
             <img src="/assets/images/picture-comment.png" alt="comment pucture">
         </div>
@@ -247,20 +247,20 @@
                 Sed pharetra eleifend ante vitae fermentum. Praesent fermentum volutpat porta. Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Sed pharetra eleifend ante vitae fermentum. </p>
         </div>
-         <div class="movie-comment-replay">
-            <div class="movie-comment-container replay-container">
-                <div class="movie-comment-img replay-comment-img">
-                    <img src="/assets/images/picture-comment.png" alt="comment pucture">
-                </div>
-                <div class="movie-comment-content replay-comment-content">
-                    <h3>NICK ROACH</h3>
-                    <p>Fusce suscipit sapien sit amet sapien placerat ultrices. Vivamus sed massa ac metus gravida dignissim egestas posuere
-                        lorem. Sed ipsum urna, facilisis quis eleifend ut, sodales sed lectus. Integer felis eu ipsum malesuada luctus.
-                        Sed pharetra eleifend ante vitae fermentum. Praesent fermentum volutpat porta. Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Sed pharetra eleifend ante vitae fermentum. </p>
-                </div>
-            </div>
+        <button>Reply</button>
+    </div>
+     <div class="movie-comment-container-reply">
+        <div class="movie-comment-img reply-comment-img">
+            <img src="/assets/images/picture-comment.png" alt="comment pucture">
         </div>
+        <div class="movie-comment-content reply-comment-content">
+            <h3>NICK ROACH</h3>
+            <p>Fusce suscipit sapien sit amet sapien placerat ultrices. Vivamus sed massa ac metus gravida dignissim egestas posuere
+                lorem. Sed ipsum urna, facilisis quis eleifend ut, sodales sed lectus. Integer felis eu ipsum malesuada luctus.
+                Sed pharetra eleifend ante vitae fermentum. Praesent fermentum volutpat porta. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Sed pharetra eleifend ante vitae fermentum. </p>
+        </div>
+        <button>Reply</button>
     </div>
     <div class="movie-comment-container">
         <div class="movie-comment-img">
@@ -273,6 +273,7 @@
                 Sed pharetra eleifend ante vitae fermentum. Praesent fermentum volutpat porta. Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Sed pharetra eleifend ante vitae fermentum. </p>
         </div>
+        <button>Reply</button>
     </div>
     <div class="movie-comment-container">
         <div class="movie-comment-img">
@@ -285,6 +286,7 @@
                 Sed pharetra eleifend ante vitae fermentum. Praesent fermentum volutpat porta. Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Sed pharetra eleifend ante vitae fermentum. </p>
         </div>
+        <button>Reply</button>
     </div>
     <div class="movie-comment-container">
         <div class="movie-comment-img">
@@ -297,5 +299,16 @@
                 Sed pharetra eleifend ante vitae fermentum. Praesent fermentum volutpat porta. Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Sed pharetra eleifend ante vitae fermentum. </p>
         </div>
+        <button>Reply</button>
+    </div>
+
+    <div class="comment-form-container">
+        <h4>Leave a comment</h4>
+        <form id="comment-submit-form" action="#/" method="post">
+            <input class="comment-submit-form-fields" type="text" name="user-name" placeholder="User Name">
+            <input class="comment-submit-form-fields" type="email" name="user-email" placeholder="Email">
+            <textarea class="comment-submit-form-text" name="user-message" cols="96" rows="8" placeholder="Text Message"></textarea>
+            <button class="comment-submit-form-btn" type="submit" disabled>Submit</button>
+        </form>
     </div>
 </section>

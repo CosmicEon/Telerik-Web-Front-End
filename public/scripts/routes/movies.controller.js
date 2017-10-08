@@ -9,35 +9,11 @@ const $mainNav = $('.main-paging-bottom');
 const $mainAside = $('.aside-widget');
 const $footer = $('footer');
 
-const templateName = 'home/movies';
+const templateHome = 'home/movies';
 const templateNav = 'home/nav';
 const templateAside = 'home/aside';
 const templateFooter = 'footer';
 const returnSize = 11;
-
-// function getMoviesByCategory(params) {
-//     const category = params.category;
-//     Promise.all([
-//         templateLoader(templateName),
-//         templateLoader(templateNav),
-//         templateLoader(templateAside),
-//         templateLoader(templateFooter),
-//         // movieData.getByCategory(category),
-//         movieData.getByCategoryAndSubcategory(category, ''), // for testing
-//     ])
-//         .then(([home, nav, aside, footer, data]) => {
-//             const navMaxLength = Math.ceil(data.length / returnSize) + 1;
-//             const navData = data.slice(0, navMaxLength);
-//             $mainContainer.html(home(data));
-//             $mainNav.html(nav(navData));
-//             $mainAside.html(aside); // data can be injected here
-//             $footer.html(footer); // data can be injected here
-//             utils.insertAside();
-//         })
-//         .catch((err) => {
-//             return console.log(err);
-//         });
-// }
 
 function getMoviesByCatAndSubcat(params) {
     const category = params.category;
@@ -46,8 +22,9 @@ function getMoviesByCatAndSubcat(params) {
         subcategory = ''; // only if category is given
     }
 
+
     Promise.all([
-        templateLoader(templateName),
+        templateLoader(templateHome),
         templateLoader(templateNav),
         templateLoader(templateAside),
         templateLoader(templateFooter),
@@ -56,6 +33,15 @@ function getMoviesByCatAndSubcat(params) {
         .then(([home, nav, aside, footer, data]) => {
             const navMaxLength = Math.ceil(data.length / returnSize) + 1;
             const navData = data.slice(0, navMaxLength);
+
+            data.forEach((item, index) => {
+                if (index === 1) {
+                    item.description = item.description.slice(0, 76);
+                    return item;
+                }
+                item.description = item.description.slice(0, 31);
+                return item;
+            });
 
             $mainContainer.html(home(data));
             $mainNav.html(nav(navData));

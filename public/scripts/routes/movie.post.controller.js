@@ -12,7 +12,6 @@ const templateComments = 'post/comments';
 function getMovieById(params) {
     const id = params.id;
 
-    // utils.initializeMovieComments();
     Promise.all([
         templateLoader(templateMovie),
         templateLoader(templateComments),

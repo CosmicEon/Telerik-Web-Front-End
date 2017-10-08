@@ -1,4 +1,23 @@
 // sass-lint:disable indentation
+$active-color-first: #9a1d0d;
+$active-color-second: #dcc08e;
+$active-color-third: #222222;
+@mixin bg-border-img-t-b {
+    background-image: url('../../assets/images/article-b-border.png'), url('../../assets/images/article-b-border.png');
+    background-position: top left, bottom left;
+    background-repeat: repeat-x;
+}
+
+@mixin bg-border-img-b {
+    background-image: url('../../assets/images/article-b-border.png');
+    background-position: bottom left;
+    background-repeat: repeat-x;
+}
+
+@mixin border-doted-b {
+    border-bottom: 1px dotted gray;
+}
+
 @font-face {
     font-family: 'LeagueGothic';
     src: url('../../assets/fonts/LeagueGothic-Regular.otf') format('opentype');
@@ -39,13 +58,13 @@ body {
                 /* .header-nav-a ??? */
                 a {
                     padding: 9px;
-                    border-radius: 10px 10px 0px 0px;
+                    border-radius: 10px 10px 0 0;
                     text-decoration: none;
                     color: white;
                     font-size: 25px;
                 }
                 a.btn-home {
-                    color: #dcc08e;
+                    color: $active-color-second;
                 }
                 /* Header Navigation Dropdown */
                 ul.header-subnav-menu {
@@ -53,38 +72,38 @@ body {
                     position: absolute;
                     margin-top: 10px;
                     padding: 15px 15px 15px 9px;
-                    background-color: #222222;
-                    border-radius: 0px 10px 10px 10px;
+                    background-color: $active-color-third;
+                    border-radius: 0 10px 10px 10px;
                     z-index: 1;
                     li {
                         display: block;
-                        padding: 6px 0px;
+                        padding: 6px 0;
                         a {
                             font-size: 23px;
                             i {
-                                padding: 0px 14px 0px 0px;
+                                padding: 0 14px 0 0;
                             }
                         }
                     }
                     &:hover {
                         a:hover {
                             // background-color: #222222;
-                            color: #dcc08e;
+                            color: $active-color-second;
                             & i {
-                                color: #9a1d0d;
+                                color: $active-color-first;
                             }
                         }
                     }
                 }
                 &:hover {
                     // & i {
-                    //     background-color: #9a1d0d;
+                    //     background-color: $active-color-first;
                     // }
                     &>a.header-nav-a {
-                        background-color: #222222;
-                        color: #dcc08e;
+                        background-color: $active-color-third;
+                        color: $active-color-second;
                         & i {
-                            color: #9a1d0d;
+                            color: $active-color-first;
                         }
                     }
                     &>ul {
@@ -113,7 +132,7 @@ body {
             }
             img {
                 height: 15px;
-                width: 15px;
+                width: 13px;
             }
         }
     }
@@ -144,7 +163,7 @@ main {
                 }
             }
             i {
-                margin: 0px 5px 0px 10px;
+                margin: 0 5px 0 10px;
                 color: #686767;
             }
         }
@@ -160,7 +179,7 @@ main {
             width: 229px;
             height: 480px;
             margin: 13px;
-            padding: 3px 3px 0px 4px;
+            padding: 3px 3px 0 4px;
             color: #7a7575;
             background-color: white;
             div.article-container-head {
@@ -169,11 +188,11 @@ main {
                 height: 330px; // box-shadow: inset 0 0 10px #000000;
                 .article-category {
                     position: absolute;
-                    top: 0px;
-                    right: 0px;
+                    top: 0;
+                    right: 0;
                     padding: 6px 8px;
                     font-size: 21px;
-                    background-color: #9a1d0d;
+                    background-color: $active-color-first;
                     color: white;
                 }
                 .article-year {
@@ -196,21 +215,19 @@ main {
                 padding: 11px 10px;
                 height: 94px;
                 h2 {
-                    color: #9a1d0d;
+                    color: $active-color-first;
                     font-size: 26px;
                 }
                 p {
                     font-size: 20px;
                     margin: 3px 2px;
-                    color: #222222;
+                    color: $active-color-third;
                 }
             }
             .article-text-a {
-                padding: 15px;
+                @include bg-border-img-b;
                 border-top: 2px dotted gray;
-                background-image: url('../../assets/images/article-b-border.png');
-                background-position: bottom left;
-                background-repeat: repeat-x;
+                padding: 15px;
                 a {
                     text-decoration: none;
                     color: #7a7575;
@@ -230,9 +247,9 @@ main {
                     box-shadow: inset 0 0 20px black;
                     img.poster-img {
                         display: block;
+                        height: 100%;
                         margin: 0 auto;
                         width: 50%;
-                        height: 100%; // width: 200px;
                     }
                 }
             }
@@ -245,20 +262,18 @@ main {
         display: block;
         .aside-widget {
             // height: 100%;
-            margin: 33px 0px 20px 16px;
+            margin: 33px 0 20px 16px;
             div.aside-component {
+                @include bg-border-img-b;
                 width: 230px;
                 height: 280px;
                 margin-bottom: 22px; // padding-top: 16px;
                 // padding-left: 18px;
                 background-color: #e7e7e7;
-                background-image: url('../../assets/images/article-b-border.png');
-                background-position: bottom left;
-                background-repeat: repeat-x;
                 h3 {
                     padding: 16px; // margin-bottom: 5px;
                     font-size: 30px;
-                    color: #9a1d0d;
+                    color: $active-color-first;
                 }
                 ul.aside-ul {
                     border-top: 1px dotted gray;
@@ -281,12 +296,12 @@ main {
         }
     }
     /* Main  Paging Bottom */
-    nav.main-paging-bottom {
+    .main-paging-bottom {
         clear: both;
         display: inline-block;
         width: 100%;
         height: auto;
-        margin: 30px 0px 37px 0px;
+        margin: 30px 0 37px 0;
         ul.main-paging-menu {
             text-align: center;
             li {
@@ -296,9 +311,12 @@ main {
                     text-decoration: none;
                     color: white;
                     font-size: 37px;
+                    span {
+                        font-size: 27px;
+                    }
                 }
                 &.main-paging-left {
-                    left: 0px;
+                    left: 0;
                 }
                 &.main-paging-right {
                     text-align: end;
@@ -321,14 +339,12 @@ main {
         }
         /* Movie Post Article Main */
         article.movie-post {
+            @include bg-border-img-t-b;
             float: left;
             width: 71.4%;
             height: 740px;
-            margin: 17px 0px 0px 0px;
+            margin: 17px 0 0 0;
             padding: 33px 6px 33px 33px;
-            background-image: url('../../assets/images/article-b-border.png'), url('../../assets/images/article-b-border.png');
-            background-repeat: repeat-x;
-            background-position: top left, bottom left;
             background-color: white;
             /* Left Side */
             .movie-post-left {
@@ -341,11 +357,11 @@ main {
                     border: 7px solid #efefef;
                     .article-category {
                         position: absolute;
-                        top: 0px;
-                        right: 0px;
+                        top: 0;
+                        right: 0;
                         padding: 6px 8px;
                         font-size: 21px;
-                        background-color: #9a1d0d;
+                        background-color: $active-color-first;
                         color: white;
                     }
                     .article-year {
@@ -372,7 +388,7 @@ main {
                         color: black;
                     }
                     ul {
-                        margin: 5px 0px;
+                        margin: 5px 0;
                         li {
                             display: inline-block;
                             padding: 10px 10px;
@@ -392,7 +408,7 @@ main {
                     }
                     ul {
                         li {
-                            padding: 4px 0px;
+                            padding: 4px 0;
                             a {
                                 font-size: 12px;
                                 font-family: 'Myriad Pro';
@@ -412,7 +428,7 @@ main {
                         text-transform: uppercase;
                     }
                     div.img-container {
-                        margin: 6px 0px;
+                        margin: 6px 0;
                         img {
                             margin: 10px 2px;
                         }
@@ -423,17 +439,17 @@ main {
             .movie-post-right {
                 float: left;
                 width: 82%;
-                padding: 0px 20px;
+                padding: 0 20px;
                 h2 {
                     font-size: 37px;
                     text-transform: uppercase;
-                    color: #9a1d0d;
+                    color: $active-color-first;
                 }
                 h3 {
                     margin: 5px 2px;
                     padding-bottom: 12px;
                     font-size: 19px;
-                    border-bottom: 1px dotted gray;
+                    @include border-doted-b;
                 }
                 .cast-container {
                     font-size: 19px;
@@ -445,8 +461,8 @@ main {
                             font-family: 'DroidSans';
                             font-size: 16px; // text-transform: uppercase;
                             span {
-                                padding: 0px 6px;
-                                color: #9a1d0d;
+                                padding: 0 6px;
+                                color: $active-color-first;
                             }
                         }
                     }
@@ -456,7 +472,7 @@ main {
                         font-size: 19px;
                     }
                     p {
-                        padding: 8px 0px 0px 16px;
+                        padding: 8px 0 0 16px;
                         font-family: 'DroidSans';
                         font-size: 16px;
                         line-height: 20px;
@@ -467,29 +483,27 @@ main {
         /* Movie Post Aside */
         .movie-post-aside {
             // height: 100%;
-            margin: 17px 0px 20px 16px;
+            margin: 17px 0 20px 16px;
             div.post-aside-component {
+                @include bg-border-img-b;
                 width: 376px;
                 height: 184px;
                 margin-bottom: 18px; // padding-top: 16px;
                 // padding-left: 18px;
                 background-color: #e7e7e7;
-                background-image: url('../../assets/images/article-b-border.png');
-                background-position: bottom left;
-                background-repeat: repeat-x;
                 /* Movie Post Aside Tablist */
                 div.tablist {
                     display: flex; // border-bottom: 2px dotted gray;
                     // margin-bottom: -1px;
                     button {
+                        @include border-doted-b;
                         display: block;
                         height: 59px;
                         width: 126px;
                         padding: 16px 26px 10px 10px;
                         font-size: 30px;
                         background-color: #d6d6d6;
-                        color: #9a1d0d; // padding: 10px;
-                        border-bottom: 1px dotted gray;
+                        color: $active-color-first; // padding: 10px;
                         border-right: 1px dotted gray;
                         &:focus {
                             background-color: #e7e7e7;
@@ -503,13 +517,13 @@ main {
                 div.tabcontent {
                     ul.tabitems {
                         &>li {
+                            @include border-doted-b;
                             display: flex;
                             height: 68px;
-                            border-bottom: 1px dotted gray;
                             div.img-container {
                                 display: inline-block;
                                 height: 100%;
-                                padding: 14px 0px 0px 15px;
+                                padding: 14px 0 0 15px;
                                 img {
                                     height: 43px;
                                     border: 3px solid #d6d6d6;
@@ -518,7 +532,7 @@ main {
                             div.text-container {
                                 display: inline-block;
                                 height: 100%;
-                                padding: 16px 0px 0px 8px;
+                                padding: 16px 0 0 8px;
                                 a {
                                     text-decoration: none;
                                     display: inline-block;
@@ -532,7 +546,7 @@ main {
                                     }
                                     p {
                                         display: block;
-                                        padding: 0px;
+                                        padding: 0;
                                         margin: 7px 10px 10px 4px;
                                         font-size: 10px;
                                         font-family: 'Georgia';
@@ -550,7 +564,7 @@ main {
                 h4 {
                     padding: 19px 19px 7px 21px; // margin-bottom: 5px;
                     font-size: 30px;
-                    color: #9a1d0d;
+                    color: $active-color-first;
                 }
                 ul.aside-ul {
                     border-top: 1px dotted gray;
@@ -558,7 +572,7 @@ main {
                     width: 100%;
                     font-family: 'Myriad Pro';
                     li {
-                        padding: 13px 5px 0px 4px;
+                        padding: 13px 5px 0 4px;
                         font-size: 15px;
                         a.aside-a {
                             text-decoration: none;
@@ -583,26 +597,27 @@ main {
         }
         /* Movie Post Comments */
         #movie-comments {
+            @include bg-border-img-t-b;
             display: block;
             width: 971px;
-            margin: 0px 0px 10px 229px;
+            margin: 0 0 10px 229px;
             background-color: white;
             color: gray;
             .movie-comment-header {
+                @include border-doted-b;
                 display: block;
-                padding: 31px 24px;
-                font-size: 40px;
-                border-bottom: 1px dotted gray;
+                padding: 36px 26px 19px 25px;
+                font-size: 37px;
                 text-transform: uppercase;
-                color: #9a1d0d;
+                color: $active-color-first;
             }
-            .movie-comment-container {
-                height: 100%;
-                border-bottom: 1px dotted gray;
+            div.movie-comment-container {
+                @include border-doted-b;
+                height: 160px; // height: 100%;
                 .movie-comment-img {
                     float: left;
                     width: 11%;
-                    padding: 16px 10px 10px 30px;
+                    padding: 30px 10px 10px 30px;
                     img {
                         height: 64px;
                     }
@@ -610,43 +625,140 @@ main {
                 .movie-comment-content {
                     float: left;
                     width: 88%;
-                    padding: 10px 10px 10px 7px;
+                    padding: 25px 10px 0 7px;
                     h3 {
                         margin-bottom: 2px;
                         font-size: 24px;
                         text-transform: uppercase;
                     }
                     p {
-                        font-size: 20px;
+                        font-size: 13px;
+                        line-height: 19px;
                         font-family: 'DroidSans';
                     }
                 }
-                .movie-comment-replay {
-                    .movie-comment-container.replay-container {
-                        .replay-comment-img {
-                            width: 30%
+                button {
+                    float: right;
+                    margin: 10px 33px 0 10px;
+                    padding: 11px 13px;
+                    border: none;
+                    background-color: #efefef;
+                    font-size: 11px;
+                    font-family: 'DroidSans';
+                    text-transform: uppercase;
+                }
+                &.first-comment {
+                    border-bottom: none;
+                }
+            }
+            div.movie-comment-container-reply {
+                @include border-doted-b; // clear: both; // border: none;
+                height: 150px; // height: 100%;
+                .movie-comment-img.reply-comment-img {
+                    float: left;
+                    width: 20%;
+                    padding: 5px 10px 0 118px;
+                    img {
+                        height: 64px;
+                    }
+                }
+                .movie-comment-content.reply-comment-content {
+                    float: left;
+                    width: 80%;
+                    padding: 0 30px 0 7px;
+                    h3 {
+                        margin-bottom: 2px;
+                        font-size: 24px;
+                        text-transform: uppercase;
+                    }
+                    p {
+                        font-size: 13px;
+                        line-height: 19px;
+                        font-family: 'DroidSans';
+                    }
+                }
+                button {
+                    float: right;
+                    margin: 0 34px 0 10px;
+                    padding: 11px 13px;
+                    border: none;
+                    background-color: #efefef;
+                    font-size: 11px;
+                    font-family: 'DroidSans';
+                    text-transform: uppercase;
+                }
+            }
+            .comment-form-container {
+                height: 435px;
+                padding: 36px 10px 10px 26px;
+                text-transform: uppercase;
+                h4 {
+                    color: $active-color-first;
+                    font-size: 37px;
+                }
+                #comment-submit-form {
+                    width: 525px;
+                    padding: 25px 0 25px 0;
+                    .comment-submit-form-fields {
+                        display: block;
+                        width: 345px;
+                        height: 39px;
+                        margin-bottom: 14px;
+                        padding: 0px 10px;
+                        background-color: #f6f6f6;
+                        border: 2px solid #d6d6d6;
+                        &:focus {
+                            outline: none;
                         }
-                        .replay-comment-content {
-                            width: 70%;
+                    }
+                    .comment-submit-form-text {
+                        display: block;
+                        padding: 10px;
+                        background-color: #f6f6f6;
+                        border: 2px solid #d6d6d6;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    .comment-submit-form-btn {
+                        float: right;
+                        margin: 20px 4px 35px 0;
+                        padding: 11px 13px;
+                        border: none;
+                        background-color: #efefef;
+                        font-size: 11px;
+                        font-family: 'DroidSans';
+                        text-transform: uppercase;
+                        &:disabled {
+                            color: #e7e7e7; // text-shadow: 2
                         }
                     }
                 }
-            }
+            } // div.movie-comment-container:first-of-type {
+            //     border-bottom: none !important;
+            // } // &:last-of-type {
+            // //     border: none;
+            // // }
         }
     }
 }
 
+// div.movie-comment-container:first-of-type {
+//     border-bottom: none !important;
+// } // &:last-of-type {
+// //     border: none;
+// // }
 
 /* Footer */
 
 footer {
     width: 100%;
     height: 404px;
-    padding: 47px 0px 0px 194px;
+    padding: 47px 0 0 194px;
     background: linear-gradient(to right, #181818 0%, #2c2c2c 25%, #2c2c2c 75%, #181818 100%);
     border-top: 2px solid #4a4a4a;
     border-left: 4px solid #4a4a4a;
-    box-shadow: 0px -1px 4px 0px #000000;
+    box-shadow: 0 -1px 4px 0 #000000;
     div.footer-widget {
         float: left;
         width: 250px;
@@ -656,17 +768,17 @@ footer {
         h3 {
             margin-bottom: 4px;
             font-size: 29px;
-            color: #dcc08e;
+            color: $active-color-second;
         }
         li {
             font-family: 'DroidSans';
-            padding: 9px 0px;
+            padding: 9px 0;
             a {
                 text-decoration: none;
                 color: #d1d1d1;
             }
             i {
-                padding: 0px 8px 0px 1px;
+                padding: 0 8px 0 1px;
                 color: #5d5d5d;
             }
             &:hover {
@@ -675,8 +787,8 @@ footer {
                     color: white;
                 }
                 i {
-                    padding: 0px 8px 0px 1px;
-                    color: #9a1d0d;
+                    padding: 0 8px 0 1px;
+                    color: $active-color-first;
                 }
             }
         }
@@ -685,7 +797,7 @@ footer {
             line-height: 20px;
         }
         &:last-child {
-            margin-right: 0px;
+            margin-right: 0;
         }
     }
 }
@@ -713,5 +825,5 @@ footer {
 }
 
 .active-state {
-    color: #dcc08e;
+    color: $active-color-second;
 }
