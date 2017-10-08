@@ -1,13 +1,16 @@
-@media screen and (max-width: 1600px) {
-  body {
-    width: 1680px; }
-    body main {
-      width: 100%;
-      height: 100%; } }
+@media screen and (max-width: 1200px) {
+  header nav div.search-field {
+    margin-top: 10px; } }
 
-@media screen and (min-width: 1601px) {
-  body {
-    width: 1680px; }
-    body main {
-      width: 100%;
-      height: 100%; } }
+@media screen and (max-width: 1600px) {
+  body main section#main-content {
+    width: 80%; }
+    body main section#main-content article.movie-post {
+      width: 65%; }
+      body main section#main-content article.movie-post div.movie-post-right {
+        width: 77%; }
+    body main section#main-content section#movie-comments {
+      width: 939px;
+      margin: 0 0 10px 0; }
+  body footer div.footer-widget {
+    margin-right: 40px; } }

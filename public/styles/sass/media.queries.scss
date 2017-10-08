@@ -1,23 +1,54 @@
 @media screen and (max-width: 360px) {}
 
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+    header{
+        nav{
+            div.search-field{
+                margin-top: 10px;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 1600px) {
     body {
-        width: 1680px; //for development
+        // width: 1680px; //for development
         main {
-            width: 100%;
-            height: 100%;
+            // width: 100%;
+            // height: 100%;
+            section#main-content {
+                width: 80%;
+                article.movie-post {
+                    width: 65%;
+                    div.movie-post-right {
+                        width: 77%;
+                    }
+                }
+                section#movie-comments {
+                    width: 939px;
+                    margin: 0 0 10px 0;
+                }
+            }
+        }
+        footer {
+            div.footer-widget {
+                margin-right: 40px;
+            }
         }
     }
 }
 
 @media screen and (min-width: 1601px) {
     body {
-        width: 1680px; //for development
+        // width: 1680px; //for development
         main {
-            width: 100%;
-            height: 100%;
+            // width: 100%;
+            // height: 100%;
+        }
+        footer {
+            div.footer-widget {
+                // margin-right: 40px;
+            }
         }
     }
 }
