@@ -1,10 +1,14 @@
-@media screen and (max-width: 360px) {}
-
-@media screen and (max-width: 1200px) {
-    header{
-        nav{
-            div.search-field{
-                margin-top: 10px;
+// sass-lint:disable indentation
+@media screen and (min-width: 1601px) {
+    body {
+        // width: 1680px; //for development
+        main {
+            // width: 100%;
+            // height: 100%;
+        }
+        footer {
+            div.footer-widget {
+                // margin-right: 40px;
             }
         }
     }
@@ -21,7 +25,7 @@
                 article.movie-post {
                     width: 65%;
                     div.movie-post-right {
-                        width: 77%;
+                        width: 73%;
                     }
                 }
                 section#movie-comments {
@@ -38,17 +42,232 @@
     }
 }
 
-@media screen and (min-width: 1601px) {
+@media screen and (max-width: 1200px) {
     body {
-        // width: 1680px; //for development
+        header.header {
+            nav.header-nav {
+                div.search-field {
+                    margin-top: 10px;
+                }
+            }
+        }
         main {
-            // width: 100%;
-            // height: 100%;
+            section#main-content {
+                article.movie-post {
+                    width: 96%;
+                    height: 100%;
+                    div.movie-post-left {
+                        width: 27%;
+                    }
+                }
+                aside {
+                    display: none;
+                }
+                section#movie-comments {
+                    width: 80%;
+                    .movie-comment-container {
+                        height: 100%;
+                        width: 100%;
+                        overflow: hidden;
+                        .movie-comment-content {
+                            width: 80%;
+                            padding-left: 5%;
+                        }
+                    }
+                    div.movie-comment-container-reply {
+                        height: 100%;
+                        width: 100%;
+                        overflow: hidden;
+                        .movie-comment-img.reply-comment-img {
+                            width: 20%;
+                            padding-left: 15%;
+                        }
+                        .movie-comment-content.reply-comment-content {
+                            width: 80%;
+                            padding-left: 5%;
+                        }
+                    }
+                    div.comment-form-container {
+                        form#comment-submit-form {
+                            width: 100%;
+                            textarea.comment-submit-form-text {
+                                width: 90%;
+                            }
+                            .comment-submit-form-btn {
+                                margin-right: 10%;
+                            }
+                        }
+                    }
+                }
+            }
+            div.aside-widget {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    body {
+        main {
+            section#main-content {
+                article.movies-main {
+                    width: 45%;
+                    height: 100%;
+                    div.article-container-head {
+                        height: 100%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                section#movie-comments {
+                    width: 96%;
+                    .movie-comment-container {
+                        .movie-comment-img {}
+                        .movie-comment-content {}
+                    }
+                    div.movie-comment-container-reply {
+                        padding-left: 9%;
+                        .movie-comment-img.reply-comment-img {}
+                        .movie-comment-content.reply-comment-content {}
+                    }
+                    div.comment-form-container {
+                        #comment-submit-form {
+                            .comment-submit-form-fields {
+                                width: 57%;
+                            }
+                            .comment-submit-form-text {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 670px) {
+    body {
+        header.header {
+            a#container-logo {
+                img.header-logo {
+                    margin: 3%;
+                    width: 94%;
+                }
+            }
+            nav.header-nav {
+                ul.header-nav-menu {
+                    button.btn-small-menu {
+                        display: inline-block;
+                        &:hover  {
+                            ~li.header-nav-li {
+                                display: block;
+                                // position: absolute;
+                                // &>ul {
+                                //     display: block;
+                                // }
+                                // need to make the button work
+                            }
+                        }
+                    }
+                    .header-nav-li {
+                        padding: 10px;
+                        background-color: gray;
+                    }
+                    &>li.header-nav-li {
+                        display: none;
+                    }
+                }
+                div.search-field {
+                    display: block;
+                    margin: 5%; // width: 60%;
+                }
+            }
+        }
+        main {
+            section#main-content {
+                article.movies-main {
+                    width: 100%;
+                    div.article-container-head {
+                        height: 100%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                article.movie-post {
+                    div.movie-post-left {
+                        display: block;
+                        width: 100%;
+                        .article-container-tags {
+                            float: left;
+                            margin: 10px;
+                        }
+                        .article-container-body {
+                            float: left;
+                            margin: 10px;
+                        }
+                        .article-container-body {
+                            float: left;
+                            margin: 10px;
+                        }
+                    }
+                    div.movie-post-right {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                section#movie-comments {
+                    width: 96%;
+                    .movie-comment-container {
+                        .movie-comment-img {
+                            padding-left: 0px;
+                        }
+                        .movie-comment-content {
+                            padding-left: 10%;
+                        }
+                    }
+                    div.movie-comment-container-reply {
+                        padding-left: 9%;
+                        .movie-comment-img.reply-comment-img {
+                            padding-left: 0px;
+                        }
+                    }
+                    div.comment-form-container {
+                        width: 100%;
+                        form.comment-submit-form {
+                            width: 80%;
+                            .comment-submit-form-text {
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+            }
         }
         footer {
-            div.footer-widget {
-                // margin-right: 40px;
+            padding-left: 25%;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        main {
+            section#main-content {
+                article.movies-main {
+                    width: 100%;
+                    div.article-container-head {
+                        height: 100%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
             }
+        }
+        footer {
+            padding-left: 5%;
         }
     }
 }

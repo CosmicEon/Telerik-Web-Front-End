@@ -111,6 +111,14 @@ body {
                     }
                 }
             }
+            button.btn-small-menu {
+                display: none;
+                padding: 12px 32px;
+                border: none;
+                background-color: $active-color-second;
+                font-size: 25px;
+                text-transform: uppercase;
+            }
         }
         /* Header Search bar */
         .search-field {

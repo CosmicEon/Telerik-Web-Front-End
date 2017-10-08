@@ -66,6 +66,13 @@ body {
             color: #9a1d0d; }
         .header nav.header-nav ul.header-nav-menu li:hover > ul {
           display: block; }
+      .header nav.header-nav ul.header-nav-menu button.btn-small-menu {
+        display: none;
+        padding: 12px 32px;
+        border: none;
+        background-color: #dcc08e;
+        font-size: 25px;
+        text-transform: uppercase; }
     .header nav.header-nav .search-field {
       float: right;
       padding: 7px 11px;
