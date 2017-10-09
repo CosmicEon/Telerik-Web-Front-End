@@ -5,6 +5,7 @@
     "main": "server.js",
     "scripts": {
         "flow": "flow",
+        "start":"node server.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "build-dev": "./dist/index.html -o"
     },
