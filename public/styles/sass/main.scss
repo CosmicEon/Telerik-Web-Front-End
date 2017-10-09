@@ -111,11 +111,12 @@ body {
                     }
                 }
             }
-            button.btn-small-menu {
+            li.btn-small-menu {
                 display: none;
                 padding: 12px 32px;
                 border: none;
                 background-color: $active-color-second;
+                color: black;
                 font-size: 25px;
                 text-transform: uppercase;
             }
@@ -318,10 +319,9 @@ main {
                 a {
                     text-decoration: none;
                     color: white;
-                    font-size: 37px;
-                    span {
-                        font-size: 27px;
-                    }
+                    font-size: 37px; // span {
+                    //     font-size: 27px;
+                    // }
                 }
                 &.main-paging-left {
                     left: 0;
@@ -454,10 +454,10 @@ main {
                     color: $active-color-first;
                 }
                 h3 {
+                    @include border-doted-b;
                     margin: 5px 2px;
                     padding-bottom: 12px;
                     font-size: 19px;
-                    @include border-doted-b;
                 }
                 .cast-container {
                     font-size: 19px;

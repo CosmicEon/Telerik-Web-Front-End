@@ -68,15 +68,24 @@
   body header.header a#container-logo img.header-logo {
     margin: 3%;
     width: 94%; }
-  body header.header nav.header-nav ul.header-nav-menu button.btn-small-menu {
+  body header.header nav.header-nav ul.header-nav-menu {
+    position: relative;
     display: inline-block; }
-    body header.header nav.header-nav ul.header-nav-menu button.btn-small-menu:hover ~ li.header-nav-li {
+    body header.header nav.header-nav ul.header-nav-menu li.btn-small-menu {
+      display: inline-block; }
+    body header.header nav.header-nav ul.header-nav-menu .header-nav-li {
+      display: none;
+      width: 200px;
+      padding: 13px 15px;
+      background-color: #222222; }
+      body header.header nav.header-nav ul.header-nav-menu .header-nav-li .header-subnav-menu {
+        margin-left: 100px;
+        margin-top: -39px;
+        border: 1px solid #dcc08e; }
+      body header.header nav.header-nav ul.header-nav-menu .header-nav-li:hover {
+        border: 1px solid #dcc08e; }
+    body header.header nav.header-nav ul.header-nav-menu:hover li.header-nav-li {
       display: block; }
-  body header.header nav.header-nav ul.header-nav-menu .header-nav-li {
-    padding: 10px;
-    background-color: gray; }
-  body header.header nav.header-nav ul.header-nav-menu > li.header-nav-li {
-    display: none; }
   body header.header nav.header-nav div.search-field {
     display: block;
     margin: 5%; }
@@ -121,11 +130,13 @@
     padding-left: 25%; } }
 
 @media screen and (max-width: 360px) {
-  body main section#main-content article.movies-main {
-    width: 100%; }
-    body main section#main-content article.movies-main div.article-container-head {
-      height: 100%; }
-      body main section#main-content article.movies-main div.article-container-head img {
-        width: 100%; }
+  body main {
+    margin: 20px 0px; }
+    body main section#main-content article.movies-main {
+      width: 95%; }
+      body main section#main-content article.movies-main div.article-container-head {
+        height: 100%; }
+        body main section#main-content article.movies-main div.article-container-head img {
+          width: 100%; }
   body footer {
     padding-left: 5%; } }
