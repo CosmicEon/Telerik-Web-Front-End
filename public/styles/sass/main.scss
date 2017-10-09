@@ -2,20 +2,10 @@
 $active-color-first: #9a1d0d;
 $active-color-second: #dcc08e;
 $active-color-third: #222222;
-@mixin bg-border-img-t-b {
-    background-image: url('../../assets/images/article-b-border.png'), url('../../assets/images/article-b-border.png');
-    background-position: top left, bottom left;
-    background-repeat: repeat-x;
-}
-
 @mixin bg-border-img-b {
     background-image: url('../../assets/images/article-b-border.png');
     background-position: bottom left;
     background-repeat: repeat-x;
-}
-
-@mixin border-doted-b {
-    border-bottom: 1px dotted gray;
 }
 
 @font-face {
@@ -55,13 +45,13 @@ body {
             margin-left: 33px;
             li {
                 display: inline-block;
-                /* .header-nav-a ??? */
                 a {
                     padding: 9px;
                     border-radius: 10px 10px 0 0;
                     text-decoration: none;
                     color: white;
                     font-size: 25px;
+                    text-shadow: 0px 1px 3px black;
                 }
                 a.btn-home {
                     color: $active-color-second;
@@ -87,7 +77,6 @@ body {
                     }
                     &:hover {
                         a:hover {
-                            // background-color: #222222;
                             color: $active-color-second;
                             & i {
                                 color: $active-color-first;
@@ -96,9 +85,6 @@ body {
                     }
                 }
                 &:hover {
-                    // & i {
-                    //     background-color: $active-color-first;
-                    // }
                     &>a.header-nav-a {
                         background-color: $active-color-third;
                         color: $active-color-second;
@@ -180,8 +166,8 @@ main {
     /* Main  Section */
     section {
         width: 100%;
-        height: 100%; // margin-bottom: 38px;
-        float: left; // display: inline-block;
+        height: 100%;
+        float: left;
         /* Main  Section Article */
         .movies-main {
             float: left;
@@ -194,7 +180,7 @@ main {
             div.article-container-head {
                 position: relative;
                 width: 100%;
-                height: 330px; // box-shadow: inset 0 0 10px #000000;
+                height: 330px;
                 .article-category {
                     position: absolute;
                     top: 0;
@@ -247,9 +233,8 @@ main {
             &:nth-of-type(2) {
                 width: 484px;
                 height: 480px;
-                margin: 13px 13px 13px 13px; // z-index: 2;
+                margin: 13px 13px 13px 13px;
                 .article-container-head {
-                    // width: 100%;
                     height: 330px;
                     overflow: hidden;
                     background-color: grey;
@@ -266,21 +251,19 @@ main {
     }
     /* Main Aside*/
     aside {
-        float: left; // height: 100%;
+        float: left;
         margin: 0;
         display: block;
         .aside-widget {
-            // height: 100%;
             margin: 33px 0 20px 16px;
             div.aside-component {
                 @include bg-border-img-b;
                 width: 230px;
                 height: 280px;
-                margin-bottom: 22px; // padding-top: 16px;
-                // padding-left: 18px;
+                margin-bottom: 22px;
                 background-color: #e7e7e7;
                 h3 {
-                    padding: 16px; // margin-bottom: 5px;
+                    padding: 16px;
                     font-size: 30px;
                     color: $active-color-first;
                 }
@@ -319,9 +302,8 @@ main {
                 a {
                     text-decoration: none;
                     color: white;
-                    font-size: 37px; // span {
-                    //     font-size: 27px;
-                    // }
+                    font-size: 37px;
+                    text-shadow: 0px 1px 3px black;
                 }
                 &.main-paging-left {
                     left: 0;
@@ -335,432 +317,9 @@ main {
 }
 
 
-/* Main -> Post */
-
-main {
-    /* Movie Post Article */
-    section#main-content {
-        width: 70.40%;
-        /* Movie Post Paging Top */
-        ul.main-paging-top {
-            width: 70%;
-        }
-        /* Movie Post Article Main */
-        article.movie-post {
-            @include bg-border-img-t-b;
-            float: left;
-            width: 71.4%;
-            height: 740px;
-            margin: 17px 0 0 0;
-            padding: 33px 6px 33px 33px;
-            background-color: white;
-            /* Left Side */
-            .movie-post-left {
-                float: left;
-                width: 200px;
-                div.article-container-head {
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    border: 7px solid #efefef;
-                    .article-category {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        padding: 6px 8px;
-                        font-size: 21px;
-                        background-color: $active-color-first;
-                        color: white;
-                    }
-                    .article-year {
-                        position: absolute;
-                        top: 34px;
-                        right: 0;
-                        padding: 7px 12px;
-                        font-size: 44px;
-                        text-shadow: 2px 2px 10px #000000;
-                        color: white;
-                    }
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        z-index: -1;
-                    }
-                }
-                div.article-container-tags {
-                    p {
-                        display: inline-block;
-                        padding-top: 20px;
-                        font-size: 23px;
-                        text-transform: uppercase;
-                        color: black;
-                    }
-                    ul {
-                        margin: 5px 0;
-                        li {
-                            display: inline-block;
-                            padding: 10px 10px;
-                            margin: 1px;
-                            font-size: 15px;
-                            font-family: 'DroidSans';
-                            background-color: #efefef;
-                            color: #6e6e6e;
-                        }
-                    }
-                }
-                .article-container-body {
-                    p {
-                        margin-top: 26px;
-                        text-transform: uppercase;
-                        font-size: 25px;
-                    }
-                    ul {
-                        li {
-                            padding: 4px 0;
-                            a {
-                                font-size: 12px;
-                                font-family: 'Myriad Pro';
-                                text-decoration: none;
-                                color: #7a7575;
-                                img {
-                                    padding: 7px 8px 2px 2px;
-                                }
-                            }
-                        }
-                    }
-                }
-                .article-container-share {
-                    p {
-                        margin-top: 27px;
-                        font-size: 23px;
-                        text-transform: uppercase;
-                    }
-                    div.img-container {
-                        margin: 6px 0;
-                        img {
-                            margin: 10px 2px;
-                        }
-                    }
-                }
-            }
-            /* Right Side */
-            .movie-post-right {
-                float: left;
-                width: 81%;
-                padding: 0 20px;
-                h2 {
-                    font-size: 37px;
-                    text-transform: uppercase;
-                    color: $active-color-first;
-                }
-                h3 {
-                    @include border-doted-b;
-                    margin: 5px 2px;
-                    padding-bottom: 12px;
-                    font-size: 19px;
-                }
-                .cast-container {
-                    font-size: 19px;
-                    ul {
-                        display: block;
-                        li {
-                            display: block;
-                            margin: 4px 17px;
-                            font-family: 'DroidSans';
-                            font-size: 16px; // text-transform: uppercase;
-                            span {
-                                padding: 0 6px;
-                                color: $active-color-first;
-                            }
-                        }
-                    }
-                }
-                .plot-summary {
-                    h4 {
-                        font-size: 19px;
-                    }
-                    p {
-                        padding: 8px 0 0 16px;
-                        font-family: 'DroidSans';
-                        font-size: 16px;
-                        line-height: 20px;
-                    }
-                }
-            }
-        }
-        /* Movie Post Aside */
-        .movie-post-aside {
-            // height: 100%;
-            margin: 17px 0 20px 16px;
-            div.post-aside-component {
-                @include bg-border-img-b;
-                width: 376px;
-                height: 184px;
-                margin-bottom: 18px; // padding-top: 16px;
-                // padding-left: 18px;
-                background-color: #e7e7e7;
-                /* Movie Post Aside Tablist */
-                div.tablist {
-                    display: flex; // border-bottom: 2px dotted gray;
-                    // margin-bottom: -1px;
-                    button {
-                        @include border-doted-b;
-                        display: block;
-                        height: 59px;
-                        width: 126px;
-                        padding: 16px 26px 10px 10px;
-                        font-size: 30px;
-                        background-color: #d6d6d6;
-                        color: $active-color-first; // padding: 10px;
-                        border-right: 1px dotted gray;
-                        &:focus {
-                            background-color: #e7e7e7;
-                            outline: none;
-                        }
-                        &.aside-btn-l {
-                            border-right: none;
-                        }
-                    }
-                }
-                div.tabcontent {
-                    ul.tabitems {
-                        &>li {
-                            @include border-doted-b;
-                            display: flex;
-                            height: 68px;
-                            div.img-container {
-                                display: inline-block;
-                                height: 100%;
-                                padding: 14px 0 0 15px;
-                                img {
-                                    height: 43px;
-                                    border: 3px solid #d6d6d6;
-                                }
-                            }
-                            div.text-container {
-                                display: inline-block;
-                                height: 100%;
-                                padding: 16px 0 0 8px;
-                                a {
-                                    text-decoration: none;
-                                    display: inline-block;
-                                    h5 {
-                                        display: block;
-                                        margin-bottom: 5px;
-                                        font-size: 15px;
-                                        font-family: 'DroidSans';
-                                        font-weight: 500;
-                                        color: black;
-                                    }
-                                    p {
-                                        display: block;
-                                        padding: 0;
-                                        margin: 7px 10px 10px 4px;
-                                        font-size: 10px;
-                                        font-family: 'Georgia';
-                                        font-style: italic;
-                                        color: #a1a1a1;
-                                    }
-                                }
-                            }
-                            &:last-child {
-                                border-bottom: none;
-                            }
-                        }
-                    }
-                }
-                h4 {
-                    padding: 19px 19px 7px 21px; // margin-bottom: 5px;
-                    font-size: 30px;
-                    color: $active-color-first;
-                }
-                ul.aside-ul {
-                    border-top: 1px dotted gray;
-                    display: inline-block;
-                    width: 100%;
-                    font-family: 'Myriad Pro';
-                    li {
-                        padding: 13px 5px 0 4px;
-                        font-size: 15px;
-                        a.aside-a {
-                            text-decoration: none;
-                            color: #898484;
-                            img {
-                                padding: 5px 11px 5px 18px;
-                            }
-                        }
-                    }
-                }
-                p.post-aside-text {
-                    padding: 12px 25px 12px 22px;
-                    font-family: 'DroidSans';
-                    font-size: 13px;
-                    line-height: 19px;
-                    color: #8a8686;
-                }
-                &:first-of-type {
-                    height: 336px;
-                }
-            }
-        }
-        /* Movie Post Comments */
-        #movie-comments {
-            @include bg-border-img-t-b;
-            display: block;
-            width: 971px;
-            margin: 0 0 10px 229px;
-            background-color: white;
-            color: gray;
-            .movie-comment-header {
-                @include border-doted-b;
-                display: block;
-                padding: 36px 26px 19px 25px;
-                font-size: 37px;
-                text-transform: uppercase;
-                color: $active-color-first;
-            }
-            div.movie-comment-container {
-                @include border-doted-b;
-                height: 160px; // height: 100%;
-                .movie-comment-img {
-                    float: left;
-                    width: 11%;
-                    padding: 30px 10px 10px 30px;
-                    img {
-                        height: 64px;
-                    }
-                }
-                .movie-comment-content {
-                    float: left;
-                    width: 88%;
-                    padding: 25px 10px 0 7px;
-                    h3 {
-                        margin-bottom: 2px;
-                        font-size: 24px;
-                        text-transform: uppercase;
-                    }
-                    p {
-                        font-size: 13px;
-                        line-height: 19px;
-                        font-family: 'DroidSans';
-                    }
-                }
-                button {
-                    float: right;
-                    margin: 10px 33px 0 10px;
-                    padding: 11px 13px;
-                    border: none;
-                    background-color: #efefef;
-                    font-size: 11px;
-                    font-family: 'DroidSans';
-                    text-transform: uppercase;
-                }
-                &.first-comment {
-                    border-bottom: none;
-                }
-            }
-            div.movie-comment-container-reply {
-                @include border-doted-b; // clear: both; // border: none;
-                height: 150px; // height: 100%;
-                .movie-comment-img.reply-comment-img {
-                    float: left;
-                    width: 20%;
-                    padding: 5px 10px 0 118px;
-                    img {
-                        height: 64px;
-                    }
-                }
-                .movie-comment-content.reply-comment-content {
-                    float: left;
-                    width: 80%;
-                    padding: 0 30px 0 7px;
-                    h3 {
-                        margin-bottom: 2px;
-                        font-size: 24px;
-                        text-transform: uppercase;
-                    }
-                    p {
-                        font-size: 13px;
-                        line-height: 19px;
-                        font-family: 'DroidSans';
-                    }
-                }
-                button {
-                    float: right;
-                    margin: 0 34px 0 10px;
-                    padding: 11px 13px;
-                    border: none;
-                    background-color: #efefef;
-                    font-size: 11px;
-                    font-family: 'DroidSans';
-                    text-transform: uppercase;
-                }
-            }
-            .comment-form-container {
-                height: 435px;
-                padding: 36px 10px 10px 26px;
-                text-transform: uppercase;
-                h4 {
-                    color: $active-color-first;
-                    font-size: 37px;
-                }
-                #comment-submit-form {
-                    width: 525px;
-                    padding: 25px 0 25px 0;
-                    .comment-submit-form-fields {
-                        display: block;
-                        width: 345px;
-                        height: 39px;
-                        margin-bottom: 14px;
-                        padding: 0px 10px;
-                        background-color: #f6f6f6;
-                        border: 2px solid #d6d6d6;
-                        &:focus {
-                            outline: none;
-                        }
-                    }
-                    .comment-submit-form-text {
-                        display: block;
-                        padding: 10px;
-                        background-color: #f6f6f6;
-                        border: 2px solid #d6d6d6;
-                        &:focus {
-                            outline: none;
-                        }
-                    }
-                    .comment-submit-form-btn {
-                        float: right;
-                        margin: 20px 4px 35px 0;
-                        padding: 11px 13px;
-                        border: none;
-                        background-color: #efefef;
-                        font-size: 11px;
-                        font-family: 'DroidSans';
-                        text-transform: uppercase;
-                        &:disabled {
-                            color: #e7e7e7; // text-shadow: 2
-                        }
-                    }
-                }
-            } // div.movie-comment-container:first-of-type {
-            //     border-bottom: none !important;
-            // } // &:last-of-type {
-            // //     border: none;
-            // // }
-        }
-    }
-}
-
-// div.movie-comment-container:first-of-type {
-//     border-bottom: none !important;
-// } // &:last-of-type {
-// //     border: none;
-// // }
-
 /* Footer */
 
 footer {
-    // width: 100%;
     overflow: hidden;
     padding: 47px 0 0 194px;
     background: linear-gradient(to right, #181818 0%, #2c2c2c 25%, #2c2c2c 75%, #181818 100%);
@@ -779,6 +338,7 @@ footer {
             margin-bottom: 4px;
             font-size: 29px;
             color: $active-color-second;
+            text-shadow: 0px 1px 3px black;
         }
         li {
             font-family: 'DroidSans';
@@ -810,6 +370,25 @@ footer {
             margin-right: 0;
         }
     }
+    .copyright-widget {
+        clear: both;
+        display: block;
+        overflow: hidden;
+        color: $active-color-second;
+        p {
+            margin: 5px 120px 35px 35px;
+            font-size: 12px;
+            font-family: 'DroidSans';
+            text-align: end;
+            a {
+                color: white;
+                &:hover {
+                    text-decoration: none;
+                    color: #7a7575;
+                }
+            }
+        }
+    }
 }
 
 .to-uppercase {
@@ -827,6 +406,11 @@ footer {
 
 .activate-aside {
     width: 76%;
+}
+
+ul.post-movie-paging-mt-ml {
+    margin-left: 83px;
+    margin-top: 7px;
 }
 
 .movie-post-paging {

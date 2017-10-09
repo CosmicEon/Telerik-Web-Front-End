@@ -1,13 +1,13 @@
 // sass-lint:disable indentation
 @media screen and (min-width: 1601px) {
     body {
-        // width: 1680px; //for development
+        // width: 1680px; // for slicing
     }
 }
 
 @media screen and (max-width: 1600px) {
     body {
-        // width: 1680px; //for development
+        // width: 1680px; // for slicing
         main {
             section#main-content {
                 width: 80%;
@@ -147,19 +147,15 @@
                     .header-nav-li {
                         display: none;
                         width: 200px;
-                        padding: 13px 15px; // background-color: #9a1d0d;
-                        // margin-left: 20px;
-                        background-color: #222222; // margin-top: 10px;
+                        padding: 13px 15px;
+                        background-color: #222222;
                         .header-subnav-menu {
-                            // position: absolute;
                             margin-left: 100px;
                             margin-top: -39px;
                             border: 1px solid #dcc08e;
                         }
                         &:hover {
                             border: 1px solid #dcc08e;
-                            // border-right: 1px solid #dcc08e;
-                            // border-bottom: 1px solid #dcc08e;
                         }
                     }
                     &:hover li.header-nav-li {
@@ -168,7 +164,7 @@
                 }
                 div.search-field {
                     display: block;
-                    margin: 5%; // width: 60%;
+                    margin: 5%;
                 }
             }
         }

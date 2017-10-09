@@ -2,7 +2,7 @@
 
 const $mainElement = $('main');
 const $sectionElement = $('#main-content');
-const $pagingTop = $('section ul.main-paging-top');
+const $pagingTop = $('ul.main-paging-top');
 const $pagingBottom = $('nav.main-paging-bottom');
 const $asideElement = $('div.aside-widget');
 
@@ -26,7 +26,6 @@ function initializeMoviePost() {
 
     $mainElement.css('margin', '10px 0px');
     $sectionElement.css('width', '100%');
-    // $sectionElement.after('<section id="movie-comments"></section>');
     $pagingTop.css('margin-left', '83px');
     $asideElement.addClass('hidden');
 }
@@ -48,8 +47,6 @@ function tablistSwitcher() {
         } else if ($eventTarget.hasClass('three')) {
             $tabitemsList.eq(2).removeClass('hidden');
         }
-
-        // $(this).removeClass('selected');
     });
 }
 

@@ -36,7 +36,6 @@ const moviesController = (data) => {
                     movie[i].subcategory = secondCategory;
 
                 }
-                // console.log(JSON.stringify(movie));
                 res.status(200)
                     .json(movie);
             })

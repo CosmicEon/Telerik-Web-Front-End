@@ -30,14 +30,14 @@ body {
       margin-left: 33px; }
       .header nav.header-nav ul.header-nav-menu li {
         display: inline-block;
-        /* .header-nav-a ??? */
         /* Header Navigation Dropdown */ }
         .header nav.header-nav ul.header-nav-menu li a {
           padding: 9px;
           border-radius: 10px 10px 0 0;
           text-decoration: none;
           color: white;
-          font-size: 25px; }
+          font-size: 25px;
+          text-shadow: 0px 1px 3px black; }
         .header nav.header-nav ul.header-nav-menu li a.btn-home {
           color: #dcc08e; }
         .header nav.header-nav ul.header-nav-menu li ul.header-subnav-menu {
@@ -237,336 +237,12 @@ main {
         main .main-paging-bottom ul.main-paging-menu li a {
           text-decoration: none;
           color: white;
-          font-size: 37px; }
+          font-size: 37px;
+          text-shadow: 0px 1px 3px black; }
         main .main-paging-bottom ul.main-paging-menu li.main-paging-left {
           left: 0; }
         main .main-paging-bottom ul.main-paging-menu li.main-paging-right {
           text-align: end; }
-
-/* Main -> Post */
-main {
-  /* Movie Post Article */ }
-  main section#main-content {
-    width: 70.40%;
-    /* Movie Post Paging Top */
-    /* Movie Post Article Main */
-    /* Movie Post Aside */
-    /* Movie Post Comments */ }
-    main section#main-content ul.main-paging-top {
-      width: 70%; }
-    main section#main-content article.movie-post {
-      background-image: url("../../assets/images/article-b-border.png"), url("../../assets/images/article-b-border.png");
-      background-position: top left, bottom left;
-      background-repeat: repeat-x;
-      float: left;
-      width: 71.4%;
-      height: 740px;
-      margin: 17px 0 0 0;
-      padding: 33px 6px 33px 33px;
-      background-color: white;
-      /* Left Side */
-      /* Right Side */ }
-      main section#main-content article.movie-post .movie-post-left {
-        float: left;
-        width: 200px; }
-        main section#main-content article.movie-post .movie-post-left div.article-container-head {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          border: 7px solid #efefef; }
-          main section#main-content article.movie-post .movie-post-left div.article-container-head .article-category {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 6px 8px;
-            font-size: 21px;
-            background-color: #9a1d0d;
-            color: white; }
-          main section#main-content article.movie-post .movie-post-left div.article-container-head .article-year {
-            position: absolute;
-            top: 34px;
-            right: 0;
-            padding: 7px 12px;
-            font-size: 44px;
-            text-shadow: 2px 2px 10px #000000;
-            color: white; }
-          main section#main-content article.movie-post .movie-post-left div.article-container-head img {
-            width: 100%;
-            height: 100%;
-            z-index: -1; }
-        main section#main-content article.movie-post .movie-post-left div.article-container-tags p {
-          display: inline-block;
-          padding-top: 20px;
-          font-size: 23px;
-          text-transform: uppercase;
-          color: black; }
-        main section#main-content article.movie-post .movie-post-left div.article-container-tags ul {
-          margin: 5px 0; }
-          main section#main-content article.movie-post .movie-post-left div.article-container-tags ul li {
-            display: inline-block;
-            padding: 10px 10px;
-            margin: 1px;
-            font-size: 15px;
-            font-family: 'DroidSans';
-            background-color: #efefef;
-            color: #6e6e6e; }
-        main section#main-content article.movie-post .movie-post-left .article-container-body p {
-          margin-top: 26px;
-          text-transform: uppercase;
-          font-size: 25px; }
-        main section#main-content article.movie-post .movie-post-left .article-container-body ul li {
-          padding: 4px 0; }
-          main section#main-content article.movie-post .movie-post-left .article-container-body ul li a {
-            font-size: 12px;
-            font-family: 'Myriad Pro';
-            text-decoration: none;
-            color: #7a7575; }
-            main section#main-content article.movie-post .movie-post-left .article-container-body ul li a img {
-              padding: 7px 8px 2px 2px; }
-        main section#main-content article.movie-post .movie-post-left .article-container-share p {
-          margin-top: 27px;
-          font-size: 23px;
-          text-transform: uppercase; }
-        main section#main-content article.movie-post .movie-post-left .article-container-share div.img-container {
-          margin: 6px 0; }
-          main section#main-content article.movie-post .movie-post-left .article-container-share div.img-container img {
-            margin: 10px 2px; }
-      main section#main-content article.movie-post .movie-post-right {
-        float: left;
-        width: 81%;
-        padding: 0 20px; }
-        main section#main-content article.movie-post .movie-post-right h2 {
-          font-size: 37px;
-          text-transform: uppercase;
-          color: #9a1d0d; }
-        main section#main-content article.movie-post .movie-post-right h3 {
-          border-bottom: 1px dotted gray;
-          margin: 5px 2px;
-          padding-bottom: 12px;
-          font-size: 19px; }
-        main section#main-content article.movie-post .movie-post-right .cast-container {
-          font-size: 19px; }
-          main section#main-content article.movie-post .movie-post-right .cast-container ul {
-            display: block; }
-            main section#main-content article.movie-post .movie-post-right .cast-container ul li {
-              display: block;
-              margin: 4px 17px;
-              font-family: 'DroidSans';
-              font-size: 16px; }
-              main section#main-content article.movie-post .movie-post-right .cast-container ul li span {
-                padding: 0 6px;
-                color: #9a1d0d; }
-        main section#main-content article.movie-post .movie-post-right .plot-summary h4 {
-          font-size: 19px; }
-        main section#main-content article.movie-post .movie-post-right .plot-summary p {
-          padding: 8px 0 0 16px;
-          font-family: 'DroidSans';
-          font-size: 16px;
-          line-height: 20px; }
-    main section#main-content .movie-post-aside {
-      margin: 17px 0 20px 16px; }
-      main section#main-content .movie-post-aside div.post-aside-component {
-        background-image: url("../../assets/images/article-b-border.png");
-        background-position: bottom left;
-        background-repeat: repeat-x;
-        width: 376px;
-        height: 184px;
-        margin-bottom: 18px;
-        background-color: #e7e7e7;
-        /* Movie Post Aside Tablist */ }
-        main section#main-content .movie-post-aside div.post-aside-component div.tablist {
-          display: flex; }
-          main section#main-content .movie-post-aside div.post-aside-component div.tablist button {
-            border-bottom: 1px dotted gray;
-            display: block;
-            height: 59px;
-            width: 126px;
-            padding: 16px 26px 10px 10px;
-            font-size: 30px;
-            background-color: #d6d6d6;
-            color: #9a1d0d;
-            border-right: 1px dotted gray; }
-            main section#main-content .movie-post-aside div.post-aside-component div.tablist button:focus {
-              background-color: #e7e7e7;
-              outline: none; }
-            main section#main-content .movie-post-aside div.post-aside-component div.tablist button.aside-btn-l {
-              border-right: none; }
-        main section#main-content .movie-post-aside div.post-aside-component div.tabcontent ul.tabitems > li {
-          border-bottom: 1px dotted gray;
-          display: flex;
-          height: 68px; }
-          main section#main-content .movie-post-aside div.post-aside-component div.tabcontent ul.tabitems > li div.img-container {
-            display: inline-block;
-            height: 100%;
-            padding: 14px 0 0 15px; }
-            main section#main-content .movie-post-aside div.post-aside-component div.tabcontent ul.tabitems > li div.img-container img {
-              height: 43px;
-              border: 3px solid #d6d6d6; }
-          main section#main-content .movie-post-aside div.post-aside-component div.tabcontent ul.tabitems > li div.text-container {
-            display: inline-block;
-            height: 100%;
-            padding: 16px 0 0 8px; }
-            main section#main-content .movie-post-aside div.post-aside-component div.tabcontent ul.tabitems > li div.text-container a {
-              text-decoration: none;
-              display: inline-block; }
-              main section#main-content .movie-post-aside div.post-aside-component div.tabcontent ul.tabitems > li div.text-container a h5 {
-                display: block;
-                margin-bottom: 5px;
-                font-size: 15px;
-                font-family: 'DroidSans';
-                font-weight: 500;
-                color: black; }
-              main section#main-content .movie-post-aside div.post-aside-component div.tabcontent ul.tabitems > li div.text-container a p {
-                display: block;
-                padding: 0;
-                margin: 7px 10px 10px 4px;
-                font-size: 10px;
-                font-family: 'Georgia';
-                font-style: italic;
-                color: #a1a1a1; }
-          main section#main-content .movie-post-aside div.post-aside-component div.tabcontent ul.tabitems > li:last-child {
-            border-bottom: none; }
-        main section#main-content .movie-post-aside div.post-aside-component h4 {
-          padding: 19px 19px 7px 21px;
-          font-size: 30px;
-          color: #9a1d0d; }
-        main section#main-content .movie-post-aside div.post-aside-component ul.aside-ul {
-          border-top: 1px dotted gray;
-          display: inline-block;
-          width: 100%;
-          font-family: 'Myriad Pro'; }
-          main section#main-content .movie-post-aside div.post-aside-component ul.aside-ul li {
-            padding: 13px 5px 0 4px;
-            font-size: 15px; }
-            main section#main-content .movie-post-aside div.post-aside-component ul.aside-ul li a.aside-a {
-              text-decoration: none;
-              color: #898484; }
-              main section#main-content .movie-post-aside div.post-aside-component ul.aside-ul li a.aside-a img {
-                padding: 5px 11px 5px 18px; }
-        main section#main-content .movie-post-aside div.post-aside-component p.post-aside-text {
-          padding: 12px 25px 12px 22px;
-          font-family: 'DroidSans';
-          font-size: 13px;
-          line-height: 19px;
-          color: #8a8686; }
-        main section#main-content .movie-post-aside div.post-aside-component:first-of-type {
-          height: 336px; }
-    main section#main-content #movie-comments {
-      background-image: url("../../assets/images/article-b-border.png"), url("../../assets/images/article-b-border.png");
-      background-position: top left, bottom left;
-      background-repeat: repeat-x;
-      display: block;
-      width: 971px;
-      margin: 0 0 10px 229px;
-      background-color: white;
-      color: gray; }
-      main section#main-content #movie-comments .movie-comment-header {
-        border-bottom: 1px dotted gray;
-        display: block;
-        padding: 36px 26px 19px 25px;
-        font-size: 37px;
-        text-transform: uppercase;
-        color: #9a1d0d; }
-      main section#main-content #movie-comments div.movie-comment-container {
-        border-bottom: 1px dotted gray;
-        height: 160px; }
-        main section#main-content #movie-comments div.movie-comment-container .movie-comment-img {
-          float: left;
-          width: 11%;
-          padding: 30px 10px 10px 30px; }
-          main section#main-content #movie-comments div.movie-comment-container .movie-comment-img img {
-            height: 64px; }
-        main section#main-content #movie-comments div.movie-comment-container .movie-comment-content {
-          float: left;
-          width: 88%;
-          padding: 25px 10px 0 7px; }
-          main section#main-content #movie-comments div.movie-comment-container .movie-comment-content h3 {
-            margin-bottom: 2px;
-            font-size: 24px;
-            text-transform: uppercase; }
-          main section#main-content #movie-comments div.movie-comment-container .movie-comment-content p {
-            font-size: 13px;
-            line-height: 19px;
-            font-family: 'DroidSans'; }
-        main section#main-content #movie-comments div.movie-comment-container button {
-          float: right;
-          margin: 10px 33px 0 10px;
-          padding: 11px 13px;
-          border: none;
-          background-color: #efefef;
-          font-size: 11px;
-          font-family: 'DroidSans';
-          text-transform: uppercase; }
-        main section#main-content #movie-comments div.movie-comment-container.first-comment {
-          border-bottom: none; }
-      main section#main-content #movie-comments div.movie-comment-container-reply {
-        border-bottom: 1px dotted gray;
-        height: 150px; }
-        main section#main-content #movie-comments div.movie-comment-container-reply .movie-comment-img.reply-comment-img {
-          float: left;
-          width: 20%;
-          padding: 5px 10px 0 118px; }
-          main section#main-content #movie-comments div.movie-comment-container-reply .movie-comment-img.reply-comment-img img {
-            height: 64px; }
-        main section#main-content #movie-comments div.movie-comment-container-reply .movie-comment-content.reply-comment-content {
-          float: left;
-          width: 80%;
-          padding: 0 30px 0 7px; }
-          main section#main-content #movie-comments div.movie-comment-container-reply .movie-comment-content.reply-comment-content h3 {
-            margin-bottom: 2px;
-            font-size: 24px;
-            text-transform: uppercase; }
-          main section#main-content #movie-comments div.movie-comment-container-reply .movie-comment-content.reply-comment-content p {
-            font-size: 13px;
-            line-height: 19px;
-            font-family: 'DroidSans'; }
-        main section#main-content #movie-comments div.movie-comment-container-reply button {
-          float: right;
-          margin: 0 34px 0 10px;
-          padding: 11px 13px;
-          border: none;
-          background-color: #efefef;
-          font-size: 11px;
-          font-family: 'DroidSans';
-          text-transform: uppercase; }
-      main section#main-content #movie-comments .comment-form-container {
-        height: 435px;
-        padding: 36px 10px 10px 26px;
-        text-transform: uppercase; }
-        main section#main-content #movie-comments .comment-form-container h4 {
-          color: #9a1d0d;
-          font-size: 37px; }
-        main section#main-content #movie-comments .comment-form-container #comment-submit-form {
-          width: 525px;
-          padding: 25px 0 25px 0; }
-          main section#main-content #movie-comments .comment-form-container #comment-submit-form .comment-submit-form-fields {
-            display: block;
-            width: 345px;
-            height: 39px;
-            margin-bottom: 14px;
-            padding: 0px 10px;
-            background-color: #f6f6f6;
-            border: 2px solid #d6d6d6; }
-            main section#main-content #movie-comments .comment-form-container #comment-submit-form .comment-submit-form-fields:focus {
-              outline: none; }
-          main section#main-content #movie-comments .comment-form-container #comment-submit-form .comment-submit-form-text {
-            display: block;
-            padding: 10px;
-            background-color: #f6f6f6;
-            border: 2px solid #d6d6d6; }
-            main section#main-content #movie-comments .comment-form-container #comment-submit-form .comment-submit-form-text:focus {
-              outline: none; }
-          main section#main-content #movie-comments .comment-form-container #comment-submit-form .comment-submit-form-btn {
-            float: right;
-            margin: 20px 4px 35px 0;
-            padding: 11px 13px;
-            border: none;
-            background-color: #efefef;
-            font-size: 11px;
-            font-family: 'DroidSans';
-            text-transform: uppercase; }
-            main section#main-content #movie-comments .comment-form-container #comment-submit-form .comment-submit-form-btn:disabled {
-              color: #e7e7e7; }
 
 /* Footer */
 footer {
@@ -587,7 +263,8 @@ footer {
     footer div.footer-widget h3 {
       margin-bottom: 4px;
       font-size: 29px;
-      color: #dcc08e; }
+      color: #dcc08e;
+      text-shadow: 0px 1px 3px black; }
     footer div.footer-widget li {
       font-family: 'DroidSans';
       padding: 9px 0; }
@@ -608,6 +285,21 @@ footer {
       line-height: 20px; }
     footer div.footer-widget:last-child {
       margin-right: 0; }
+  footer .copyright-widget {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    color: #dcc08e; }
+    footer .copyright-widget p {
+      margin: 5px 120px 35px 35px;
+      font-size: 12px;
+      font-family: 'DroidSans';
+      text-align: end; }
+      footer .copyright-widget p a {
+        color: white; }
+        footer .copyright-widget p a:hover {
+          text-decoration: none;
+          color: #7a7575; }
 
 .to-uppercase {
   text-transform: uppercase; }
@@ -621,6 +313,10 @@ footer {
 
 .activate-aside {
   width: 76%; }
+
+ul.post-movie-paging-mt-ml {
+  margin-left: 83px;
+  margin-top: 7px; }
 
 .movie-post-paging {
   margin-left: '83px';
