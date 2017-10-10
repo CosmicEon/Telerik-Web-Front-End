@@ -4,19 +4,18 @@ Course project made for Telerik Academy's final course - "Web front-end developm
 
 # Movie Forum - course project
 ## 1. Description
-Single-page application made by the given design without any full-featured js framework/library. All the data requests are handled from the server through  ajax calls.
+Single-page application made by the given design without using any full-featured js framework/library. All the data requests are handled from the server through AJAX calls. And all the information is stored in database.
 ## 2. Technologies used
 ### Front End
 - Handlebars
 - JQuery
 - Navigo
-- Systen.js
+- System.js
 
 ### Back End
 - Babel
-- Express
 - Gulp
-- MongoDB
+- MongoDB (Express)
 - Node.js
 
 ## 3. API End points
@@ -45,15 +44,16 @@ mongod
 node server.js
 ```
 
-To run server in **development mode**:
+## 5. Commands to use
+Run server in **development mode**:
 ```
 mongod -> if db isn't launched
 gulp dev
 ```
 
-To **build** the production version:
+To build the application for **production**:
 ```
 gulp build
 ```
-## 5. Author
+## 6. Author
  Krasen Ilkov - [Telerik Academy Profile](http://telerikacademy.com/Users/KraitynDeWas)
