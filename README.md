@@ -4,7 +4,7 @@ Course project made for Telerik Academy's final course - "Web front-end developm
 
 # Movie Forum - course project
 ## 1. Description
-Single-page application made by the given design without using any full-featured js framework/library. All the data requests are handled from the server through AJAX calls. And all the information is stored in database.
+Single-page application made by the given design (TheStyle.psd) without using any full-featured js framework/library. All the data requests are handled from the server through AJAX calls. And all the information is stored in database.
 ## 2. Technologies used
 ### Front End
 - Handlebars
