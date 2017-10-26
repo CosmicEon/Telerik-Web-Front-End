@@ -71,7 +71,7 @@ gulp.task('dev:js', () => {
 
 
 // BUILD MODE
-gulp.task('build:all', ['build:html', 'build:css', 'build:js', 'copy:assets']);
+gulp.task('build', ['build:html', 'build:css', 'build:js', 'copy:assets']);
 
 gulp.task('copy:assets', ['copy:fonts', 'copy:images']);
 

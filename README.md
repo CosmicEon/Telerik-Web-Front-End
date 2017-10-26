@@ -4,7 +4,7 @@ Course project made for Telerik Academy's final course - "Web front-end developm
 
 # Movie Forum - course project
 ## 1. Description
-Single-page application made by the given design (TheStyle.psd) without using any full-featured js framework/library. All the data requests are handled from the server through AJAX calls. And all the information is stored in database.
+Single-page application sliced from the given design (TheStylePSD folder), without using any full-featured js framework/library. Implemented responsive design look good on most used resolutions, without using Bootstrap for it. All the application's data requests are handled from the server through AJAX calls. And the information is stored in database. Scripts are made for build and dev.
 ## 2. Technologies used
 ### Front End
 - Handlebars
@@ -15,8 +15,8 @@ Single-page application made by the given design (TheStyle.psd) without using an
 ### Back End
 - Babel
 - Gulp
-- MongoDB (Express)
-- Node.js
+- MongoDB
+- Node.js (Express)
 
 ## 3. API End points
 
@@ -45,13 +45,13 @@ node server.js
 ```
 
 ## 5. Commands to use
-Run server in **development mode**:
+Run application in **development mode**:
 ```
 mongod -> if db isn't launched
 gulp dev
 ```
 
-To build the application for **production**:
+Build application for **production**:
 ```
 gulp build
 ```
