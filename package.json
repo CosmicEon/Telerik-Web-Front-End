@@ -5,7 +5,7 @@
     "main": "server.js",
     "scripts": {
         "flow": "flow",
-        "start":"node ./server.js",
+        "start": "node ./server.js",
         "test": "echo \"Error: no test specified\" && exit 1",
         "build-dev": "./dist/index.html -o"
     },
@@ -29,6 +29,7 @@
         "@types/handlebars": "^4.0.36",
         "@types/jquery": "^3.2.12",
         "@types/mongodb": "^2.2.11",
+        "@types/morgan": "^1.7.35",
         "@types/navigo": "^4.0.1",
         "@types/node": "^8.0.33",
         "@types/systemjs": "^0.20.5",
@@ -41,6 +42,7 @@
         "handlebars": "^4.0.10",
         "jquery": "^3.2.1",
         "mongodb": "^2.2.31",
+        "morgan": "^1.9.0",
         "navigo": "^5.3.1",
         "systemjs": "^0.20.19",
         "systemjs-plugin-babel": "0.0.25"
@@ -53,7 +55,6 @@
         "@types/gulp-nodemon": "0.0.30",
         "@types/gulp-sass": "0.0.30",
         "@types/gulp-uglify": "^3.0.1",
-        "@types/morgan": "^1.7.33",
         "@types/open": "0.0.29",
         "babel-preset-env": "^1.6.0",
         "flow-bin": "^0.55.0",
@@ -66,7 +67,6 @@
         "gulp-nodemon": "^2.2.1",
         "gulp-sass": "^3.1.0",
         "gulp-uglify": "^3.0.0",
-        "morgan": "^1.8.2",
         "open": "0.0.5"
     },
     "engines": {
