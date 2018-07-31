@@ -1,0 +1,202 @@
+@media screen and (max-width: 1600px) {
+  body main section#main-content {
+    width: 80%;
+  }
+  body main section#main-content article.movie-post {
+    width: 65%;
+  }
+  body main section#main-content article.movie-post div.movie-post-right {
+    width: 73%;
+  }
+  body main section#main-content section#movie-comments {
+    width: 939px;
+    margin: 0 0 10px 0;
+  }
+  body footer div.footer-widget {
+    margin-right: 40px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body header.header nav.header-nav div.search-field {
+    margin-top: 10px;
+  }
+  body main section#main-content article.movie-post {
+    width: 96%;
+    height: 100%;
+  }
+  body main section#main-content article.movie-post div.movie-post-left {
+    width: 27%;
+  }
+  body main section#main-content aside {
+    display: none;
+  }
+  body main section#main-content section#movie-comments {
+    width: 80%;
+  }
+  body main section#main-content section#movie-comments .movie-comment-container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  body main section#main-content section#movie-comments .movie-comment-container .movie-comment-content {
+    width: 80%;
+    padding-left: 5%;
+  }
+  body main section#main-content section#movie-comments div.movie-comment-container-reply {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  body main section#main-content section#movie-comments div.movie-comment-container-reply .movie-comment-img.reply-comment-img {
+    width: 20%;
+    padding-left: 15%;
+  }
+  body main section#main-content section#movie-comments div.movie-comment-container-reply .movie-comment-content.reply-comment-content {
+    width: 80%;
+    padding-left: 5%;
+  }
+  body main section#main-content section#movie-comments div.comment-form-container form#comment-submit-form {
+    width: 100%;
+  }
+  body main section#main-content section#movie-comments div.comment-form-container form#comment-submit-form textarea.comment-submit-form-text {
+    width: 90%;
+  }
+  body main section#main-content section#movie-comments div.comment-form-container form#comment-submit-form .comment-submit-form-btn {
+    margin-right: 10%;
+  }
+  body main div.aside-widget {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  body main section#main-content article.movies-main {
+    width: 45%;
+    height: 100%;
+  }
+  body main section#main-content article.movies-main div.article-container-head {
+    height: 100%;
+  }
+  body main section#main-content article.movies-main div.article-container-head img {
+    width: 100%;
+  }
+  body main section#main-content section#movie-comments {
+    width: 96%;
+  }
+  body main section#main-content section#movie-comments div.movie-comment-container-reply {
+    padding-left: 9%;
+  }
+  body main section#main-content section#movie-comments div.comment-form-container #comment-submit-form .comment-submit-form-fields {
+    width: 57%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  body header.header a#container-logo img.header-logo {
+    margin: 3%;
+    width: 94%;
+  }
+  body header.header nav.header-nav ul.header-nav-menu {
+    position: relative;
+    display: inline-block;
+  }
+  body header.header nav.header-nav ul.header-nav-menu li.btn-small-menu {
+    display: inline-block;
+  }
+  body header.header nav.header-nav ul.header-nav-menu .header-nav-li {
+    display: none;
+    width: 200px;
+    padding: 13px 15px;
+    background-color: #222222;
+  }
+  body header.header nav.header-nav ul.header-nav-menu .header-nav-li .header-subnav-menu {
+    margin-left: 100px;
+    margin-top: -39px;
+    border: 1px solid #dcc08e;
+  }
+  body header.header nav.header-nav ul.header-nav-menu .header-nav-li:hover {
+    border: 1px solid #dcc08e;
+  }
+  body header.header nav.header-nav ul.header-nav-menu:hover li.header-nav-li {
+    display: block;
+  }
+  body header.header nav.header-nav div.search-field {
+    display: block;
+    margin: 5%;
+  }
+  body main section#main-content article.movies-main {
+    width: 100%;
+  }
+  body main section#main-content article.movies-main div.article-container-head {
+    height: 100%;
+  }
+  body main section#main-content article.movies-main div.article-container-head img {
+    width: 100%;
+  }
+  body main section#main-content article.movie-post div.movie-post-left {
+    display: block;
+    width: 100%;
+  }
+  body main section#main-content article.movie-post div.movie-post-left .article-container-tags {
+    float: left;
+    margin: 10px;
+  }
+  body main section#main-content article.movie-post div.movie-post-left .article-container-body {
+    float: left;
+    margin: 10px;
+  }
+  body main section#main-content article.movie-post div.movie-post-left .article-container-body {
+    float: left;
+    margin: 10px;
+  }
+  body main section#main-content article.movie-post div.movie-post-right {
+    display: block;
+    width: 100%;
+  }
+  body main section#main-content section#movie-comments {
+    width: 96%;
+  }
+  body main section#main-content section#movie-comments .movie-comment-container .movie-comment-img {
+    padding-left: 0px;
+  }
+  body main section#main-content section#movie-comments .movie-comment-container .movie-comment-content {
+    padding-left: 10%;
+  }
+  body main section#main-content section#movie-comments div.movie-comment-container-reply {
+    padding-left: 9%;
+  }
+  body main section#main-content section#movie-comments div.movie-comment-container-reply .movie-comment-img.reply-comment-img {
+    padding-left: 0px;
+  }
+  body main section#main-content section#movie-comments div.comment-form-container {
+    width: 100%;
+  }
+  body main section#main-content section#movie-comments div.comment-form-container form.comment-submit-form {
+    width: 80%;
+  }
+  body main section#main-content section#movie-comments div.comment-form-container form.comment-submit-form .comment-submit-form-text {
+    width: 80%;
+  }
+  body footer {
+    padding-left: 25%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body main {
+    margin: 20px 0px;
+  }
+  body main section#main-content article.movies-main {
+    width: 95%;
+  }
+  body main section#main-content article.movies-main div.article-container-head {
+    height: 100%;
+  }
+  body main section#main-content article.movies-main div.article-container-head img {
+    width: 100%;
+  }
+  body footer {
+    padding-left: 5%;
+  }
+}
